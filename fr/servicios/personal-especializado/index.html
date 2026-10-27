@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personnel Spécialisé pour l'Industrie — Soudeurs, Tuyauteurs, Chaudronniers & Mécaniciens | HEXAGON</title>
+  <meta name="description" content="Personnel spécialisé pour la maintenance industrielle, les arrêts d'usine et le montage mécanique. Soudeurs qualifiés, tuyauteurs, chaudronniers, mécaniciens et monteurs.">
+  <link rel="icon" type="image/png" href="../../../favicon.png">
+
+  <!-- Google Fonts: Poppins (400, 500, 600, 700) + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos Globales -->
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body class="page-inner-service">
+
+  <!-- ==========================================================================
+       CABECERA CORPORATIVA HEXAGON
+       ========================================================================== -->
+  <header class="header-main" id="siteHeader">
+    <div class="header-container">
+      <a href="../../index.html" class="brand-logo" aria-label="Hexagon Industrial Services - Accueil">
+        <img src="../../../assets/images/logo/hexagon-logo-main.png" alt="Hexagon" class="brand-logo-img" width="160" height="38">
+      </a>
+
+      <!-- Navegación de Escritorio con enlaces directos a las secciones principales -->
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <a href="../../index.html#quienes-somos" class="nav-link">Qui sommes-nous</a>
+        <a href="../../index.html#servicios" class="nav-link">Services</a>
+        <a href="../../index.html#sectores" class="nav-link">Secteurs</a>
+        <a href="../../index.html#ambito" class="nav-link">Présence en Europe</a>
+        <a href="../../index.html#contacto" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Selector de Idiomas y CTA Principal -->
+      <div class="header-actions">
+        <div class="lang-selector-dropdown" id="langSelector">
+          <button type="button" class="lang-selector-btn" id="langToggleBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Choisir la langue">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span class="lang-current-label">Français</span>
+            <span class="lang-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Langues disponibles">
+            <li role="option" aria-selected="false"><a href="../../../es/servicios/personal-especializado/index.html" class="lang-menu-item"><span class="lang-name">Español</span> <span class="lang-code">(ES)</span></a></li>
+            <li role="option" aria-selected="false"><a href="../../../en/servicios/personal-especializado/index.html" class="lang-menu-item"><span class="lang-name">English</span> <span class="lang-code">(EN)</span></a></li>
+            <li role="option" aria-selected="false"><a href="../../../it/servicios/personal-especializado/index.html" class="lang-menu-item"><span class="lang-name">Italiano</span> <span class="lang-code">(IT)</span></a></li>
+            <li role="option" aria-selected="true"><a href="index.html" class="lang-menu-item is-active"><span class="lang-name">Français</span> <span class="lang-code">(FR)</span></a></li>
+            <li role="option" aria-selected="false"><a href="../../../de/servicios/personal-especializado/index.html" class="lang-menu-item"><span class="lang-name">Deutsch</span> <span class="lang-code">(DE)</span></a></li>
+          </ul>
+        </div>
+
+        <button type="button" class="btn-header-quote" data-action="open-quote-modal" data-service="Profesionales Especializados">
+          <svg class="hex-bolt-head" viewBox="0 0 100 100" width="14" height="14" aria-hidden="true" style="margin-right: 6px;">
+            <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" fill="none" stroke="currentColor" stroke-width="7"/>
+            <polygon points="50,22 75,36 75,64 50,78 25,64 25,36" fill="currentColor"/>
+          </svg>
+          Demander un devis
+        </button>
+
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú Drawer Móvil -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu mobile">
+    <div class="drawer-header">
+      <img src="../../../assets/images/logo/hexagon-logo-light.png" alt="Hexagon" class="drawer-logo">
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="Fermer le menu">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="../../index.html#quienes-somos" class="drawer-link"><span><span>Qui sommes-nous</span></a>
+      <a href="../../index.html#servicios" class="drawer-link"><span>Services</span></a>
+      <a href="../../index.html#sectores" class="drawer-link"><span>Secteurs</span></a>
+      <a href="../../index.html#ambito" class="drawer-link"><span>Présence en Europe</span></a>
+      <a href="../../index.html#contacto" class="drawer-link"><span>Contact</span></a>
+      <a href="#solicitar" class="drawer-link drawer-link-quote" data-action="open-quote-modal" data-service="Profesionales Especializados">Demander des professionnels</span><span class="drawer-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+    </nav>
+    <div style="padding: 1rem 1.5rem; border-top: 1px solid rgba(212, 152, 115, 0.2);">
+      <span style="font-size: 0.78rem; color: var(--color-copper); font-family: var(--font-mono); text-transform: uppercase;">Langue / Language:</span>
+      <div class="drawer-lang-bar" style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
+        <a href="../../../es/servicios/personal-especializado/index.html" style="color: #FFF;">ES</a>
+        <span style="color: rgba(255,255,255,0.3);">|</span>
+        <a href="../../../en/servicios/personal-especializado/index.html" style="color: #FFF;">EN</a>
+        <span style="color: rgba(255,255,255,0.3);">|</span>
+        <a href="../../../it/servicios/personal-especializado/index.html" style="color: #FFF;">IT</a>
+        <span style="color: rgba(255,255,255,0.3);">|</span>
+        <a href="index.html" style="font-weight: 700; color: var(--color-copper);">FR</a>
+        <span style="color: rgba(255,255,255,0.3);">|</span>
+        <a href="../../../de/servicios/personal-especializado/index.html" style="color: #FFF;">DE</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         1. BANNER HORIZONTAL DE ABERTURA (FOTOGRAFÍA INDUSTRIAL + BREADCRUMBS)
+         ========================================================================== -->
+    <section class="inner-hero-banner" aria-label="En-tête de service">
+      <img src="../../../assets/images/industrial/personal_banner_panoramica.png" alt="Installations industrielles et tuyauteries de précision chez Hexagon" class="inner-hero-bg">
+      <div class="inner-hero-overlay" aria-hidden="true"></div>
+      <div class="inner-hero-pattern" aria-hidden="true"></div>
+
+      <div class="inner-hero-container">
+        <!-- Navegación de localización (Fil d'Ariane) -->
+        <nav class="inner-breadcrumbs" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <span class="crumb-sep">/</span>
+          <a href="../../index.html#servicios">Services</a>
+          <span class="crumb-sep">/</span>
+          <span class="crumb-current" aria-current="page">Personnel spécialisé</span>
+        </nav>
+
+        <h1 class="inner-hero-title">
+          <span class="inner-hero-title-light">Personnel</span>
+          <span class="inner-hero-title-bold">spécialisé</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. CONTENIDO PRINCIPAL EN DOS COLUMNAS (28% LATERAL / 72% PRINCIPAL)
+         ========================================================================== -->
+    <section class="inner-content-section">
+      <div class="inner-content-container">
+
+        <!-- Bouton mobile de navigation rapide entre profils -->
+        <button type="button" class="mobile-profiles-toggle-btn" id="mobileProfilesToggle" aria-expanded="false" aria-controls="mobileProfilesMenu">
+          <span>Voir les profils professionnels</span>
+          <span class="toggle-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </button>
+        <div class="mobile-profiles-dropdown" id="mobileProfilesMenu">
+          <ul class="sidebar-nav-list">
+            <li class="sidebar-nav-item"><a href="#perfil-soldadores" class="sidebar-nav-link"><span>Soudeurs</span><span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a></li>
+            <li class="sidebar-nav-item"><a href="#perfil-tuberos" class="sidebar-nav-link"><span>Tuyauteurs</span><span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a></li>
+            <li class="sidebar-nav-item"><a href="#perfil-caldereros" class="sidebar-nav-link"><span>Chaudronniers</span><span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a></li>
+            <li class="sidebar-nav-item"><a href="#perfil-mecanicos" class="sidebar-nav-link"><span>Mécaniciens industriels</span><span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a></li>
+            <li class="sidebar-nav-item"><a href="#perfil-montadores" class="sidebar-nav-link"><span>Monteurs industriels</span><span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a></li>
+          </ul>
+        </div>
+
+        <div class="inner-layout-grid">
+
+          <!-- ====================================================================
+               COLONNE LATÉRALE (28%) : NAVIGATION STICKY + CARTE COMMERCIALE
+               ==================================================================== -->
+          <aside class="inner-sidebar" aria-label="Navigation des profils et contact">
+
+            <!-- Navegación por Especialidades -->
+            <div class="sidebar-nav-card">
+              <div class="sidebar-nav-header">Profils professionnels</div>
+              <ul class="sidebar-nav-list" role="list">
+                <li class="sidebar-nav-item">
+                  <a href="#perfil-soldadores" class="sidebar-nav-link is-active">
+                    <span>Soudeurs</span>
+                    <span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                  </a>
+                </li>
+                <li class="sidebar-nav-item">
+                  <a href="#perfil-tuberos" class="sidebar-nav-link">
+                    <span>Tuyauteurs</span>
+                    <span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                  </a>
+                </li>
+                <li class="sidebar-nav-item">
+                  <a href="#perfil-caldereros" class="sidebar-nav-link">
+                    <span>Chaudronniers</span>
+                    <span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                  </a>
+                </li>
+                <li class="sidebar-nav-item">
+                  <a href="#perfil-mecanicos" class="sidebar-nav-link">
+                    <span>Mécaniciens industriels</span>
+                    <span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                  </a>
+                </li>
+                <li class="sidebar-nav-item">
+                  <a href="#perfil-montadores" class="sidebar-nav-link">
+                    <span>Monteurs industriels</span>
+                    <span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tarjeta Comercial Lateral con Fotografía Real -->
+            <div class="sidebar-cta-card">
+              <div class="sidebar-cta-bg-wrap">
+                <img src="../../../assets/images/industrial/personal_tecnico_prancheta.jpg" alt="Professionnel technique de Hexagon avec uniforme officiel et bloc-notes" class="sidebar-cta-bg" width="682" height="1024">
+                <div class="sidebar-cta-overlay" aria-hidden="true"></div>
+                <div class="sidebar-cta-sheen" aria-hidden="true"></div>
+              </div>
+              <div class="sidebar-cta-content">
+                <h3 class="sidebar-cta-title">Besoin de professionnels ?</h3>
+                <p class="sidebar-cta-text">Indiquez-nous les spécialités requises et la date de démarrage de vos travaux.</p>
+                <button type="button" class="btn btn-primary sidebar-cta-btn" data-action="open-quote-modal" data-service="Profesionales Especializados">
+                  Consulter la disponibilité
+                </button>
+              </div>
+            </div>
+
+          </aside>
+
+          <!-- ====================================================================
+               COLONNE PRINCIPALE (72%) : CONTENU ÉDITORIAL COMPLET
+               ==================================================================== -->
+          <div class="inner-main-col">
+
+            <!-- 1. Photographie Principale et Présentation du Service -->
+            <div class="inner-media-frame">
+              <img src="../../../assets/images/industrial/personal_equipe_tubulacao.jpg" alt="Équipe de spécialistes industriels Hexagon prête pour intervention sur site" class="inner-media-img" width="1024" height="576">
+            </div>
+
+            <div class="inner-intro-block">
+              <div class="inner-copper-divider" aria-hidden="true"></div>
+              <h2 class="inner-section-title">Renforcez votre équipe avec des professionnels spécialisés.</h2>
+              <p class="inner-prose">
+                Chez HEXAGON, nous mettons à votre disposition des soudeurs, tuyauteurs, chaudronniers, mécaniciens et monteurs pour vos travaux de maintenance industrielle, arrêts d'usine et montage.
+              </p>
+              <p class="inner-prose">
+                Si vous avez besoin de renforcer votre équipe pour une intervention spécifique ou d'intégrer une spécialité non disponible en interne, faites-nous part des travaux prévus, du lieu et des dates afin d'étudier votre demande.
+              </p>
+            </div>
+
+            <!-- 2. Grille Éditoriale des Spécialités Confirmées -->
+            <div class="profiles-editorial-section">
+              <h2 class="inner-section-title">Quels professionnels pouvez-vous solliciter ?</h2>
+
+              <div class="profiles-editorial-grid">
+
+                <!-- Profil 1: Soudeurs -->
+                <article class="profile-editorial-item" id="perfil-soldadores">
+                  <div class="profile-item-header">
+                    <div class="profile-icon-wrap" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 3-4 6-4 9a4 4 0 0 0 8 0c0-3-4-6-4-9z"/><path d="M12 18v4"/><path d="M8 22h8"/></svg>
+                    </div>
+                    <h3 class="profile-item-title">Soudeurs</h3>
+                  </div>
+                  <p class="profile-item-desc">
+                    Pour l'assemblage de pièces, tuyauteries et ensembles métalliques lors de travaux de montage et de réparation.
+                  </p>
+                </article>
+
+                <!-- Profil 2: Tuyauteurs -->
+                <article class="profile-editorial-item" id="perfil-tuberos">
+                  <div class="profile-item-header">
+                    <div class="profile-icon-wrap" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h6v4H2z"/><path d="M8 9h8"/><path d="M16 7h6v4h-6z"/><path d="M12 9v11"/><path d="M9 20h6v2H9z"/></svg>
+                    </div>
+                    <h3 class="profile-item-title">Tuyauteurs</h3>
+                  </div>
+                  <p class="profile-item-desc">
+                    Pour la préparation, le traçage, l'ajustage et le montage de tuyauteries et de leurs accessoires.
+                  </p>
+                </article>
+
+                <!-- Profil 3: Chaudronniers -->
+                <article class="profile-editorial-item" id="perfil-caldereros">
+                  <div class="profile-item-header">
+                    <div class="profile-icon-wrap" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
+                    </div>
+                    <h3 class="profile-item-title">Chaudronniers</h3>
+                  </div>
+                  <p class="profile-item-desc">
+                    Pour le traçage, la découpe, le formage et l'assemblage de pièces et d'ensembles de tôlerie industrielle.
+                  </p>
+                </article>
+
+                <!-- Profil 4: Mécaniciens industriels -->
+                <article class="profile-editorial-item" id="perfil-mecanicos">
+                  <div class="profile-item-header">
+                    <div class="profile-icon-wrap" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </div>
+                    <h3 class="profile-item-title">Mécaniciens industriels</h3>
+                  </div>
+                  <p class="profile-item-desc">
+                    Pour le démontage, le montage, le lignage et l'ajustement d'ensembles mécaniques et le remplacement d'équipements.
+                  </p>
+                </article>
+
+                <!-- Profil 5: Monteurs industriels (pleine largeur) -->
+                <article class="profile-editorial-item item-span-full" id="perfil-montadores">
+                  <div class="profile-item-header">
+                    <div class="profile-icon-wrap" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="4" rx="1"/><path d="M5 9v11"/><path d="M19 9v11"/><path d="M2 17h20"/><path d="M12 9v11"/><path d="M7 9l5 8 5-8"/></svg>
+                    </div>
+                    <h3 class="profile-item-title">Monteurs industriels</h3>
+                  </div>
+                  <p class="profile-item-desc">
+                    Pour l'assemblage et le montage de structures métalliques, d'équipements et d'installations industrielles.
+                  </p>
+                </article>
+
+              </div>
+
+              <p class="profiles-footer-note">
+                Indiquez-nous les tâches et les exigences techniques de chaque poste pour vous proposer le profil adéquat.
+              </p>
+            </div>
+
+            <!-- 3. Seconde Photographie et Application en Projets -->
+            <div class="inner-media-frame">
+              <img src="../../../assets/images/industrial/01_soldagem_real.jpg" alt="Travaux techniques de soudage et d'ajustage en environnement industriel" class="inner-media-img" width="892" height="502">
+            </div>
+
+            <div class="applications-section">
+              <h2 class="inner-section-title">Personnel pour la maintenance, les arrêts et le montage.</h2>
+
+              <div class="applications-grid">
+                <!-- Bloque 1 -->
+                <div class="application-card">
+                  <h3 class="app-card-title">Maintenance industrielle</h3>
+                  <p class="app-card-desc">Renfort de professionnels pour les opérations de maintenance préventive et corrective, la révision d'équipements et le remplacement de composants.</p>
+                </div>
+
+                <!-- Bloque 2 -->
+                <div class="application-card">
+                  <h3 class="app-card-title">Arrêts d'usine</h3>
+                  <p class="app-card-desc">Équipes de différentes spécialités pour exécuter l'ensemble des travaux planifiés pendant un arrêt programmé.</p>
+                </div>
+
+                <!-- Bloque 3 -->
+                <div class="application-card">
+                  <h3 class="app-card-title">Montage industriel</h3>
+                  <p class="app-card-desc">Professionnels pour l'assemblage, le levage, l'installation et l'ajustement de structures, de tuyauteries et d'équipements.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Ce que le client doit préciser -->
+            <div class="requirements-card-box">
+              <h3 class="requirements-title">Indiquez-nous les besoins de votre entreprise.</h3>
+              <p class="requirements-intro">Pour étudier votre demande, merci de préciser :</p>
+              
+              <ul class="requirements-checklist">
+                <li class="requirements-check-item">
+                  <span class="check-bullet" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <span>Spécialités et nombre de professionnels requis.</span>
+                </li>
+                <li class="requirements-check-item">
+                  <span class="check-bullet" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <span>Nature et description des travaux à réaliser.</span>
+                </li>
+                <li class="requirements-check-item">
+                  <span class="check-bullet" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <span>Localisation du site industriel.</span>
+                </li>
+                <li class="requirements-check-item">
+                  <span class="check-bullet" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <span>Date de démarrage et durée estimée.</span>
+                </li>
+                <li class="requirements-check-item">
+                  <span class="check-bullet" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                  <span>Exigences techniques, habilitations et accès au site.</span>
+                </li>
+              </ul>
+
+              <p class="requirements-complement">
+                Si vous disposez d'un cahier des charges ou d'un descriptif de poste, vous pouvez le joindre à votre demande.
+              </p>
+
+              <div>
+                <button type="button" class="btn btn-primary" data-action="open-quote-modal" data-service="Profesionales Especializados">
+                  Demander des professionnels
+                </button>
+              </div>
+            </div>
+
+            <!-- 5. Foire Aux Questions (FAQ Accordions) -->
+            <div class="inner-faq-section">
+              <h2 class="inner-faq-title">Foire aux questions</h2>
+
+              <div class="inner-faq-list">
+
+                <!-- FAQ 1 -->
+                <div class="inner-faq-item">
+                  <button type="button" class="inner-faq-question" aria-expanded="false">
+                    <span>Puis-je demander des professionnels de différentes spécialités ?</span>
+                    <span class="inner-faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+                  </button>
+                  <div class="inner-faq-answer">
+                    Oui. Vous pouvez combiner plusieurs spécialités dans une même demande en précisant le nombre d'intervenants requis pour chacune.
+                  </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="inner-faq-item">
+                  <button type="button" class="inner-faq-question" aria-expanded="false">
+                    <span>Puis-je solliciter du personnel pour un arrêt d'usine programmé ?</span>
+                    <span class="inner-faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+                  </button>
+                  <div class="inner-faq-answer">
+                    Oui. Transmettez-nous les dates d'intervention, les travaux prévus et les profils nécessaires pour planifier la mobilisation de nos équipes.
+                  </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="inner-faq-item">
+                  <button type="button" class="inner-faq-question" aria-expanded="false">
+                    <span>Que se passe-t-il si les travaux exigent une qualification spécifique ?</span>
+                    <span class="inner-faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+                  </button>
+                  <div class="inner-faq-answer">
+                    Mentionnez cette exigence lors de votre demande. Les qualifications des soudeurs (licences à jour, normes EN/ASME) et habilitations requises sont vérifiées avant l'intervention.
+                  </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="inner-faq-item">
+                  <button type="button" class="inner-faq-question" aria-expanded="false">
+                    <span>Comment transmettre une demande ?</span>
+                    <span class="inner-faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+                  </button>
+                  <div class="inner-faq-answer">
+                    Cliquez sur le bouton « Demander des professionnels » et remplissez le formulaire avec le lieu, les dates et les spécialités souhaitées.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. BANDE COMMERCIALE DE FERMETURE (PLEINE LARGEUR)
+         ========================================================================== -->
+    <section class="inner-commercial-closure" aria-label="Contact pour projets">
+      <div class="closure-pattern" aria-hidden="true"></div>
+      <div class="closure-container">
+        <h2 class="closure-title">De quels professionnels avez-vous besoin pour votre prochain projet ?</h2>
+        <p class="closure-desc">Transmettez-nous vos besoins et vos plannings pour étudier la disponibilité et vous adresser une proposition technique chiffrée.</p>
+        <button type="button" class="btn btn-hero-primary closure-btn" data-action="open-quote-modal" data-service="Profesionales Especializados">
+          Demander des professionnels
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-main">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Columna de Marca -->
+        <div class="footer-col-brand">
+          <a href="../../index.html" title="Hexagon Montajes Industriales">
+            <img src="../../../assets/images/logo/hexagon-logo-light.png" alt="Hexagon Montajes Industriales" class="footer-logo-img">
+          </a>
+          <span style="font-family: var(--font-heading); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.2em; color: var(--color-copper);">
+            MONTAGE ET MAINTENANCE INDUSTRIELLE
+          </span>
+          <p class="footer-lead">
+            Exécution de services industriels spécialisés avec nos propres équipes sur les sites de nos clients en Espagne et dans les pays de l’Union européenne.
+          </p>
+        </div>
+
+        <!-- Columna Servicios -->
+        <div class="footer-col">
+          <h4>Services sur Site</h4>
+          <ul class="footer-links">
+            <li><a href="../../index.html#servicios">Montage Industriel</a></li>
+            <li><a href="../../index.html#servicios">Maintenance Industrielle</a></li>
+            <li><a href="../../index.html#servicios">Soudure Technique (TIG / MIG)</a></li>
+            <li><a href="../../index.html#servicios">Montage de Tuyauteries (Piping)</a></li>
+            <li><a href="../../index.html#servicios">Chaudronnerie et Assemblage</a></li>
+            <li><a href="../../index.html#servicios">Mécanique et Alignement</a></li>
+            <li><a href="../../index.html#servicios">Installation et Réparation</a></li>
+            <li><a href="../../index.html#servicios">Travaux Auxiliaires</a></li>
+            <li><a href="../../index.html#servicios">Professionnels Spécialisés</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Operativa -->
+        <div class="footer-col">
+          <h4>Opérations et Couverture</h4>
+          <ul class="footer-links">
+            <li><a href="../../index.html#ambito">Zone d’Intervention en Europe</a></li>
+            <li><a href="../../index.html#contacto" data-action="open-quote-modal">Demande de Devis</a></li>
+            <li><a href="../../index.html#contacto" data-action="open-candidacy-modal">Candidature pour Professionnels</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Contacto Corporativo -->
+        <div class="footer-col">
+          <h4>Assistance Technique</h4>
+          <ul class="footer-links">
+            <li>
+              <strong>Demandes d’offres :</strong><br>
+              <a href="mailto:contacto@montajeshexagon.com" style="color: var(--color-copper);">contacto@montajeshexagon.com</a>
+            </li>
+            <li style="margin-top: 0.5rem;">
+              <strong>Horaires d’ouverture :</strong><br>
+              Du lundi au vendredi de 08h00 à 18h00
+            </li>
+            <li style="margin-top: 0.5rem;">
+              <strong>Canal direct :</strong><br>
+              <a href="#" data-action="whatsapp" style="color: #25D366; font-weight: 600;">Consulter via WhatsApp</a>
+            </li>
+            <li style="margin-top: 0.75rem;">
+              <strong>Langues disponibles :</strong><br>
+              <div class="footer-lang-links" style="display: flex; gap: 0.4rem; font-size: 0.8rem; margin-top: 0.25rem;">
+                <a href="../../../es/servicios/personal-especializado/index.html" style="color: #FFF;">ES</a>
+                <a href="../../../en/servicios/personal-especializado/index.html" style="color: #FFF;">EN</a>
+                <a href="../../../it/servicios/personal-especializado/index.html" style="color: #FFF;">IT</a>
+                <a href="index.html" style="color: var(--color-copper); font-weight: 700;">FR</a>
+                <a href="../../../de/servicios/personal-especializado/index.html" style="color: #FFF;">DE</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div>
+            © 2026 Hexagon Montajes Industriales, S.L. Tous droits réservés.
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#" data-legal-modal="avisoLegal">Mentions Légales</a>
+            <a href="#" data-legal-modal="privacidad">Politique de Confidentialité</a>
+            <a href="../../index.html#contacto" data-action="open-candidacy-modal">Travailler sur nos Projets</a>
+            <a href="../../index.html#contacto" data-action="open-quote-modal">Demander un Devis</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <aside class="whatsapp-floating" data-action="whatsapp" title="Consultation technique directe par WhatsApp" aria-label="Consulter par WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.953 1.18-.175.201-.351.226-.652.075-.301-.15-1.272-.469-2.423-1.496-.896-.799-1.501-1.786-1.677-2.087-.175-.301-.019-.464.131-.614.136-.135.301-.351.451-.527.15-.175.2-.301.301-.501.101-.2.05-.376-.025-.527-.075-.15-.678-1.634-.929-2.239-.245-.589-.494-.509-.678-.519l-.578-.01c-.2 0-.527.075-.802.376s-1.054 1.03-1.054 2.513c0 1.482 1.079 2.914 1.23 3.115.15.2 2.124 3.243 5.145 4.549.719.311 1.281.497 1.719.636.722.23 1.379.197 1.9.119.58-.088 1.78-.728 2.03-1.431.251-.703.251-1.306.176-1.431-.076-.125-.276-.201-.577-.351zM12.046 2C6.51 2 2 6.51 2 12.046c0 1.977.574 3.821 1.564 5.385L2 22l4.72-1.527c1.502.923 3.268 1.458 5.326 1.458 5.536 0 10.046-4.51 10.046-10.046S17.582 2 12.046 2z"/></svg>
+    <div class="whatsapp-tooltip">Consultation technique par WhatsApp</div>
+  </aside>
+
+  <div class="modal-dialog-backdrop" id="legalModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+    <div class="modal-dialog-card">
+      <div class="modal-header">
+        <h3 id="legalModalTitle">Informations Légales</h3>
+        <button type="button" class="modal-close-btn" id="legalModalClose" aria-label="Fermer la fenêtre">&times;</button>
+      </div>
+      <div class="modal-body-scroll" id="legalModalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-secondary" id="legalModalOk">Compris et fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <dialog id="quoteModal" class="quote-modal-dialog" aria-labelledby="quoteModalTitle" aria-modal="true">
+    <div class="quote-modal-wrapper">
+      
+      <!-- Cabecera del Modal -->
+      <div class="quote-modal-header">
+        <div class="quote-modal-title-group">
+          <div class="hex-badge-dark hex-badge-sm">
+            <svg class="hex-bolt-head hex-bolt-head-dark hex-bolt-head-sm" viewBox="0 0 100 100" width="14" height="14" aria-hidden="true"><polygon points="50,5 88.9,27.5 88.9,72.5 50,95 11.1,72.5 11.1,27.5" class="bolt-head-hex"/><circle cx="50" cy="50" r="32" class="bolt-head-crown"/></svg>
+            Demande Officielle d’Offre
+          </div>
+          <h2 id="quoteModalTitle" class="quote-modal-title">Demande de Devis Industriel</h2>
+          <p class="quote-modal-subtitle">Assistant technique structuré en 3 étapes. Les champs marqués d’un astérisque (*) sont obligatoires.</p>
+        </div>
+        
+        <button type="button" class="quote-modal-close" id="quoteModalCloseBtn" aria-label="Fermer la fenêtre de devis">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Cuerpo del Modal con Wizard -->
+      <div class="quote-modal-body">
+        <div class="quote-wizard-container">
+          
+              <!-- Pestañas de Etapas -->
+              <div class="wizard-steps-nav" role="tablist" aria-label="Étapes du formulaire">
+                <button type="button" class="wizard-step-tab is-active" id="stepTab1" role="tab" aria-selected="true" aria-controls="wizardStep1">
+                  <span class="step-num">1</span>
+                  <span class="step-label">Entreprise et Contact</span>
+                </button>
+                <div class="wizard-step-line" aria-hidden="true"></div>
+                <button type="button" class="wizard-step-tab" id="stepTab2" role="tab" aria-selected="false" aria-controls="wizardStep2">
+                  <span class="step-num">2</span>
+                  <span class="step-label">Projet et Profils</span>
+                </button>
+                <div class="wizard-step-line" aria-hidden="true"></div>
+                <button type="button" class="wizard-step-tab" id="stepTab3" role="tab" aria-selected="false" aria-controls="wizardStep3">
+                  <span class="step-num">3</span>
+                  <span class="step-label">Périmètre et Envoi</span>
+                </button>
+              </div>
+
+              <form id="quoteForm" novalidate>
+                
+                <!-- PASO 1: Empresa y Contacto -->
+                <div class="wizard-step-pane is-visible" id="wizardStep1" role="tabpanel" aria-labelledby="stepTab1">
+                  <h4 class="wizard-pane-title">Étape 1 : Coordonnées de l’Entreprise et du Responsable</h4>
+                  <p class="wizard-pane-desc">Identifiez votre société et le contact technique pour l’émission de la proposition.</p>
+                  
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="quoteCompany" class="form-label">
+                        Entreprise / Raison Sociale <span class="req">*</span>
+                      </label>
+                      <input type="text" id="quoteCompany" name="quoteCompany" class="form-input" placeholder="Ex. Industries Métallurgiques SAS" autocomplete="organization" required>
+                      <span class="field-error-msg" id="err-quoteCompany"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="quoteName" class="form-label">
+                        Nom et Prénom du Responsable <span class="req">*</span>
+                      </label>
+                      <input type="text" id="quoteName" name="quoteName" class="form-input" placeholder="Ex. Pierre Dubois" autocomplete="name" required>
+                      <span class="field-error-msg" id="err-quoteName"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="quoteEmail" class="form-label">
+                        Courriel Professionnel <span class="req">*</span>
+                      </label>
+                      <input type="email" id="quoteEmail" name="quoteEmail" class="form-input" placeholder="responsable@entreprise.fr" autocomplete="email" required>
+                      <span class="field-error-msg" id="err-quoteEmail"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="quotePhone" class="form-label">
+                        Téléphone Direct de Contact <span class="req">*</span>
+                      </label>
+                      <input type="tel" id="quotePhone" name="quotePhone" class="form-input" placeholder="+33 1 40 00 00 00" autocomplete="tel" required>
+                      <span class="field-error-msg" id="err-quotePhone"></span>
+                    </div>
+                  </div>
+
+                  <div class="wizard-actions">
+                    <div></div>
+                    <button type="button" class="btn btn-primary" id="btnWizardNext1">
+                      Suivant : Projet et Localisation
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- PASO 2: Proyecto, Perfiles y Ubicación -->
+                <div class="wizard-step-pane" id="wizardStep2" role="tabpanel" aria-labelledby="stepTab2">
+                  <h4 class="wizard-pane-title">Étape 2 : Données du Projet et Lieu d’Intervention</h4>
+                  <p class="wizard-pane-desc">Indiquez où seront exécutés les travaux et le type de service ou les profils requis.</p>
+
+                  <div class="form-grid">
+                    <div class="form-group form-group-full">
+                      <label for="quoteLocation" class="form-label">
+                        Lieu / Site d’exécution des travaux <span class="req">*</span>
+                      </label>
+                      <input type="text" id="quoteLocation" name="quoteLocation" class="form-input" placeholder="Ex. Plateforme Industrielle de Lyon (France) / Complexe de Tarragone (Espagne)" required>
+                      <span class="form-hint">Modifiable : si vous avez cliqué sur la carte, vous pouvez préciser ici l’usine ou la zone exacte.</span>
+                      <span class="field-error-msg" id="err-quoteLocation"></span>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                      <label for="quoteService" class="form-label">
+                        Service Industriel Principal Requis <span class="req">*</span>
+                      </label>
+                      <select id="quoteService" name="quoteService" class="form-select" required>
+                        <option value="" disabled selected>Sélectionnez le type de service...</option>
+                        <option value="Montaje Industrial">Montage Industriel (Lignes, structures, assemblage)</option>
+                        <option value="Mantenimiento Industrial">Maintenance Industrielle (Préventive, corrective, arrêts)</option>
+                        <option value="Soldadura Técnica">Soudure Technique et Industrielle (TIG, MIG-MAG, électrode, homologuée)</option>
+                        <option value="Montaje de Tuberías (Piping)">Montage de Tuyauteries / Piping Industriel (Isométriques, process)</option>
+                        <option value="Calderería y Estructuras">Chaudronnerie et Assemblage Structurel (Trémies, silos, réservoirs)</option>
+                        <option value="Mecánica Industrial">Mécanique Industrielle (Alignement laser, nivellement, machines tournantes)</option>
+                        <option value="Instalación y Reparación">Installation et Réparation d’Équipements sur Site</option>
+                        <option value="Trabajos Auxiliares">Travaux Auxiliaires Industriels (Déchargements, manutention)</option>
+                        <option value="Profesionales Especializados" selected>Professionnels Spécialisés pour Projets (Soudeurs, tuyauteurs, chaudronniers, mécaniciens)</option>
+                        <option value="Proyecto Multidisciplinar / Parada Completa">Arrêt Général d’Unité / Services multidisciplinaires combinés</option>
+                      </select>
+                      <span class="field-error-msg" id="err-quoteService"></span>
+                    </div>
+
+                    <!-- Perfiles Necesarios -->
+                    <div class="form-group form-group-full">
+                      <label class="form-label">
+                        Profils nécessaires pour le projet <span style="font-size: 0.78rem; color: var(--color-text-muted); font-weight: normal;">(Sélectionnez les spécialités souhaitées ou demandez un conseil de dimensionnement)</span>
+                      </label>
+                      <div class="profiles-checkbox-grid">
+                        <label class="profile-checkbox-item">
+                          <input type="checkbox" name="quoteProfiles" value="Soldadores">
+                          <span class="profile-check-box"></span>
+                          <span class="profile-check-text">
+                            <strong>Soudeurs</strong>
+                            <small>TIG, MIG-MAG, électrode</small>
+                          </span>
+                        </label>
+                        <label class="profile-checkbox-item">
+                          <input type="checkbox" name="quoteProfiles" value="Caldereros">
+                          <span class="profile-check-box"></span>
+                          <span class="profile-check-text">
+                            <strong>Chaudronniers</strong>
+                            <small>Traçage et formage</small>
+                          </span>
+                        </label>
+                        <label class="profile-checkbox-item">
+                          <input type="checkbox" name="quoteProfiles" value="Tuberos">
+                          <span class="profile-check-box"></span>
+                          <span class="profile-check-text">
+                            <strong>Tuyauteurs</strong>
+                            <small>Piping et isométriques</small>
+                          </span>
+                        </label>
+                        <label class="profile-checkbox-item">
+                          <input type="checkbox" name="quoteProfiles" value="Montadores">
+                          <span class="profile-check-box"></span>
+                          <span class="profile-check-text">
+                            <strong>Monteurs</strong>
+                            <small>Structures et assemblage</small>
+                          </span>
+                        </label>
+                        <label class="profile-checkbox-item">
+                          <input type="checkbox" name="quoteProfiles" value="Mecánicos industriales">
+                          <span class="profile-check-box"></span>
+                          <span class="profile-check-text">
+                            <strong>Mécaniciens industriels</strong>
+                            <small>Machines tournantes et alignement</small>
+                          </span>
+                        </label>
+                        <label class="profile-checkbox-item profile-checkbox-highlight">
+                          <input type="checkbox" name="quoteProfiles" id="quoteHelpDefineTeam" value="Necesito ayuda para definir el equipo">
+                          <span class="profile-check-box"></span>
+                          <span class="profile-check-text">
+                            <strong>J’ai besoin d’aide pour définir l’équipe</strong>
+                            <small>Nous étudierons la dotation optimale pour votre projet</small>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="quoteStaff" class="form-label">
+                        Nombre approximatif de professionnels
+                      </label>
+                      <input type="text" id="quoteStaff" name="quoteStaff" class="form-input" placeholder="Ex. 1 chef d’équipe + 4 spécialistes / À définir">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="quoteDuration" class="form-label">
+                        Durée prévisionnelle des travaux
+                      </label>
+                      <input type="text" id="quoteDuration" name="quoteDuration" class="form-input" placeholder="Ex. 3 semaines, arrêt de 10 jours, 2 mois...">
+                    </div>
+
+                    <div class="form-group form-group-full">
+                      <label for="quoteStartDate" class="form-label">
+                        Date Prévisionnelle de Début des Travaux
+                      </label>
+                      <input type="date" id="quoteStartDate" name="quoteStartDate" class="form-input">
+                    </div>
+                  </div>
+
+                  <div class="wizard-actions">
+                    <button type="button" class="btn btn-outline-petrol" id="btnWizardPrev2">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                      Précédent : Entreprise
+                    </button>
+                    <button type="button" class="btn btn-primary" id="btnWizardNext2">
+                      Suivant : Périmètre et Envoi
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- PASO 3: Alcance Técnico, Documentos, Revisión y Envío -->
+                <div class="wizard-step-pane" id="wizardStep3" role="tabpanel" aria-labelledby="stepTab3">
+                  <h4 class="wizard-pane-title">Étape 3 : Périmètre Technique, Documentation et Vérification</h4>
+                  <p class="wizard-pane-desc">Décrivez les besoins de l’intervention et joignez les plans ou cahiers des charges.</p>
+
+                  <div class="form-grid">
+                    <div class="form-group form-group-full">
+                      <label for="quoteScope" class="form-label">
+                        Description du Périmètre des Travaux <span class="req">*</span>
+                      </label>
+                      <textarea id="quoteScope" name="quoteScope" class="form-textarea" placeholder="Décrivez le type de travaux, les équipements concernés, les poids ou dimensions approximatifs, les tolérances requises, les moyens auxiliaires disponibles sur site et toute exigence HSE spécifique." required></textarea>
+                      <span class="form-hint">Indiquez également si l’intervention se déroulera en postes spécifiques ou durant un week-end / arrêt technique.</span>
+                      <span class="field-error-msg" id="err-quoteScope"></span>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                      <label class="form-label">Documentation Technique Complémentaire (Plans, Isométriques ou Cahiers des Charges)</label>
+                      <div class="form-file-drop" id="fileDropZone">
+                        <input type="file" id="quoteFiles" name="quoteFiles" multiple accept=".pdf,.dwg,.dxf,.zip,.rar,.png,.jpg,.jpeg">
+                        <div class="file-drop-content">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                          <p id="fileDropText">Cliquez ou glissez vos plans, isométriques ou cahiers des charges</p>
+                          <span>Formats acceptés : PDF, DWG, DXF, ZIP, images (max. 25 Mo)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Resumen Previo de Datos -->
+                  <div class="quote-review-summary" id="quoteReviewSummary">
+                    <h5>Synthèse préliminaire de votre demande technique :</h5>
+                    <div class="review-grid">
+                      <div><strong>Entreprise :</strong> <span id="revCompany">—</span></div>
+                      <div><strong>Contact :</strong> <span id="revContact">—</span></div>
+                      <div><strong>Localisation :</strong> <span id="revLocation">—</span></div>
+                      <div><strong>Service :</strong> <span id="revService">—</span></div>
+                    </div>
+                  </div>
+
+                  <!-- Consentimiento de Privacidad Obligatorio -->
+                  <div class="form-consent">
+                    <input type="checkbox" id="quotePrivacy" name="quotePrivacy" required>
+                    <label for="quotePrivacy">
+                      J’ai lu et j’accepte le traitement des données fournies conformément à la <a href="#" data-legal-modal="privacidad">Politique de Confidentialité</a> et aux <a href="#" data-legal-modal="avisoLegal">Mentions Légales</a> pour la réception de la proposition technico-commerciale de Hexagon Montajes Industriales. <span class="req">*</span>
+                    </label>
+                    <span class="field-error-msg" id="err-quotePrivacy"></span>
+                  </div>
+
+                  <!-- Alertas dinámicas -->
+                  <div id="formErrorAlert" class="form-alert is-error" role="alert" style="display:none;"></div>
+                  <div id="formSuccessAlert" class="form-alert is-success" role="status" style="display:none;"></div>
+
+                  <div class="wizard-actions">
+                    <button type="button" class="btn btn-outline-petrol" id="btnWizardPrev3">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                      Précédent : Projet
+                    </button>
+                    <button type="submit" class="btn btn-lg btn-primary" id="btnQuoteSubmit">
+                      <svg class="hex-bolt-head" viewBox="0 0 100 100" width="16" height="16" aria-hidden="true"><polygon points="50,5 88.9,27.5 88.9,72.5 50,95 11.1,72.5 11.1,27.5" class="bolt-head-hex"/><circle cx="50" cy="50" r="32" class="bolt-head-crown"/><line x1="50" y1="5" x2="50" y2="18" class="bolt-head-facet"/><line x1="88.9" y1="27.5" x2="77.7" y2="34" class="bolt-head-facet"/><line x1="88.9" y1="72.5" x2="77.7" y2="66" class="bolt-head-facet"/><line x1="50" y1="95" x2="50" y2="82" class="bolt-head-facet"/><line x1="11.1" y1="72.5" x2="22.3" y2="66" class="bolt-head-facet"/><line x1="11.1" y1="27.5" x2="22.3" y2="34" class="bolt-head-facet"/></svg>
+                      Envoyer la Demande de Devis
+                    </button>
+                  </div>
+                </div>
+
+              </form>
+
+        </div>
+      </div>
+
+    </div>
+  </dialog>
+
+  <dialog id="candidacyModal" class="quote-modal-dialog candidacy-modal-dialog" aria-labelledby="candidacyModalTitle" aria-modal="true">
+    <div class="quote-modal-wrapper">
+      <div class="quote-modal-header">
+        <div class="quote-modal-title-group">
+          <div class="hex-badge hex-badge-copper">
+            <svg class="hex-bolt-head hex-bolt-head-sm" viewBox="0 0 100 100" width="14" height="14" role="img" aria-label="Symbole Hexagon">
+  <polygon points="50,4 89.84,27 89.84,73 50,96 10.16,73 10.16,27" fill="#123D3A" stroke="#D49873" stroke-width="3.5" stroke-linejoin="round"/>
+  <line x1="50" y1="4" x2="50" y2="12" stroke="rgba(212,152,115,0.75)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="89.84" y1="27" x2="82.91" y2="31" stroke="rgba(212,152,115,0.75)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="89.84" y1="73" x2="82.91" y2="69" stroke="rgba(212,152,115,0.75)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="50" y1="96" x2="50" y2="88" stroke="rgba(212,152,115,0.75)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="10.16" y1="73" x2="17.09" y2="69" stroke="rgba(212,152,115,0.75)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="10.16" y1="27" x2="17.09" y2="31" stroke="rgba(212,152,115,0.75)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="50" cy="50" r="38" fill="#1A4D49" stroke="#D49873" stroke-width="3"/>
+</svg>
+            Recrutement Direct de Spécialistes
+          </div>
+          <h2 id="candidacyModalTitle" class="quote-modal-title">Rejoignez-nous : Canal de Candidatures Techniques</h2>
+          <p class="quote-modal-subtitle">
+            Intégration directe de professionnels techniques pour l’exécution de projets sur des sites industriels en Espagne et dans l’Union européenne.
+          </p>
+        </div>
+        <button type="button" class="quote-modal-close" id="candidacyModalCloseBtn" aria-label="Fermer la fenêtre de candidature">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="quote-modal-body candidate-modal-body">
+        <form id="candidateForm" class="candidate-form" novalidate>
+            <div class="form-grid">
+              
+              <div class="form-group">
+                <label for="candName" class="form-label">Nom et Prénom complets <span class="req">*</span></label>
+                <input type="text" id="candName" name="candName" class="form-input" placeholder="Ex. Julien Martin" required>
+                <span class="field-error-msg" id="err-candName"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="candContact" class="form-label">Téléphone et/ou Courriel de Contact <span class="req">*</span></label>
+                <input type="text" id="candContact" name="candContact" class="form-input" placeholder="Ex. +33 6 12 34 56 78 / julien@courriel.fr" required>
+                <span class="field-error-msg" id="err-candContact"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="candSpecialty" class="form-label">Spécialité Industrielle Principale <span class="req">*</span></label>
+                <select id="candSpecialty" name="candSpecialty" class="form-select" required>
+                  <option value="" disabled selected>Sélectionnez votre spécialité...</option>
+                  <option value="Soldador homologado TIG / MIG-MAG">Soudeur homologué (TIG / MIG-MAG / Électrode)</option>
+                  <option value="Tubero industrial / Piping">Tuyauteur industriel (Isométriques, spools, piping)</option>
+                  <option value="Calderero">Chaudronnier (Traçage, formage, chaudronnerie moyenne/lourde)</option>
+                  <option value="Montador mecánico industrial">Monteur mécanicien industriel (Structures, lignes)</option>
+                  <option value="Mecánico industrial de rotativos">Mécanicien industriel (Pompes, réducteurs, alignement laser)</option>
+                  <option value="Encargado / Supervisor de obra">Chef d’équipe / Superviseur technique de chantier</option>
+                  <option value="Otra especialidad técnica">Autre spécialité technique industrielle</option>
+                </select>
+                <span class="field-error-msg" id="err-candSpecialty"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="candResidence" class="form-label">Pays et Département / Ville de Résidence <span class="req">*</span></label>
+                <input type="text" id="candResidence" name="candResidence" class="form-input" placeholder="Ex. France, Lyon / Espagne, Tarragone" required>
+                <span class="field-error-msg" id="err-candResidence"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="candMobility" class="form-label">Disponibilité de Déplacement</label>
+                <select id="candMobility" name="candMobility" class="form-select">
+                  <option value="Disponibilidad inmediata para España y UE">Disponibilité immédiate pour projets en Espagne et UE</option>
+                  <option value="Movilidad en territorio nacional (España)">Mobilité nationale uniquement</option>
+                  <option value="Disponible con preaviso de 15 días">Disponible avec préavis de 15 jours</option>
+                  <option value="Disponible en 1 mes">Disponible sous 1 mois</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="candLanguages" class="form-label">Langues de Travail</label>
+                <input type="text" id="candLanguages" name="candLanguages" class="form-input" placeholder="Ex. Français (natif), Espagnol intermédiaire, Anglais technique...">
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="candCertifications" class="form-label">Certifications et Qualifications Déclarées</label>
+                <input type="text" id="candCertifications" name="candCertifications" class="form-input" placeholder="Ex. Qualification 6G ASME IX / EN ISO 9606-1, N1/N2, Espaces Confinés, CACES Nacelle...">
+                <span class="form-hint">Les qualifications déclarées seront vérifiées sur pièces lors du processus de validation technique préalable à toute affectation.</span>
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="candSummary" class="form-label">Synthèse de l’Expérience en Arrêts et Montages</label>
+                <textarea id="candSummary" name="candSummary" class="form-textarea" placeholder="Indiquez les principaux types de travaux réalisés (arrêts pétrochimiques, montage de structures, soudage de spools, centrales à cycle combiné, etc.) et vos années d’expérience."></textarea>
+              </div>
+
+              <div class="form-group form-group-full">
+                <label class="form-label">Curriculum Vitae (Optionnel - Format PDF ou DOCX)</label>
+                <div class="form-file-drop candidate-file-drop" id="candFileDrop">
+                  <input type="file" id="candCv" name="candCv" accept=".pdf,.doc,.docx">
+                  <div class="file-drop-content">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <p id="candFileText">Joindre un CV à jour (PDF ou Word, max. 10 Mo)</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-consent">
+              <input type="checkbox" id="candPrivacy" name="candPrivacy" required>
+              <label for="candPrivacy">
+                J’accepte le traitement de mes données personnelles pour la gestion des candidatures et les processus de recrutement interne de Hexagon Montajes Industriales conformément à la <a href="#" data-legal-modal="privacidad">Politique de Confidentialité</a>. <span class="req">*</span>
+              </label>
+              <span class="field-error-msg" id="err-candPrivacy"></span>
+            </div>
+
+            <!-- Alertas dinámicas -->
+            <div id="candErrorAlert" class="form-alert is-error" role="alert" style="display:none;"></div>
+            <div id="candSuccessAlert" class="form-alert is-success" role="status" style="display:none;"></div>
+
+            <button type="submit" class="btn btn-secondary btn-lg" id="btnCandSubmit" style="width: 100%; margin-top: 1.5rem;">
+              <svg class="hex-bolt-head hex-bolt-head-sm" viewBox="0 0 100 100" width="13" height="13" aria-hidden="true"><polygon points="50,5 88.9,27.5 88.9,72.5 50,95 11.1,72.5 11.1,27.5" class="bolt-head-hex"/><circle cx="50" cy="50" r="32" class="bolt-head-crown"/></svg>
+              Envoyer la Candidature Technique
+            </button>
+          </form>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="../../../assets/js/europe-data.js"></script>
+  <script src="../../../assets/js/main.js"></script>
+</body>
+</html>

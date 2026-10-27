@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="84" viewBox="0 0 96 84">
+  <defs>
+    <g id="hex-mark">
+      <polygon points="99,76 100,297 188,348 191,280 245,248 286,270 286,443 219,483 5,356 5,132" fill="#D49873" />
+      <polygon points="223,3 432,129 432,356 337,412 336,186 253,137 249,203 198,233 151,206 152,45" fill="#D49873" />
+    </g>
+  </defs>
+  <g transform="translate(16, 12.1) scale(0.036613)">
+    <use href="#hex-mark" />
+  </g>
+  <g transform="translate(64, 54.1) scale(0.036613)">
+    <use href="#hex-mark" />
+  </g>
+</svg>

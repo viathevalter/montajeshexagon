@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="208" viewBox="0 0 240 208">
+  <defs>
+    <!-- Hexagonal nut / bolt head geometric unit -->
+    <g id="hex-nut" fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-linecap="round">
+      <!-- Outer hexagon (flat-topped, radius 60) -->
+      <polygon points="30,-51.96 60,0 30,51.96 -30,51.96 -60,0 -30,-51.96" stroke-width="1.4" />
+      <!-- Inner chamfer circle of hex nut -->
+      <circle cx="0" cy="0" r="42" stroke-width="1" stroke-opacity="0.7" />
+      <!-- Inner bolt/thread bore hexagon -->
+      <polygon points="15,-25.98 30,0 15,25.98 -15,25.98 -30,0 -15,-25.98" stroke-width="1.1" stroke-opacity="0.8" />
+      <!-- Radial vertex ticks (bolt head facets) -->
+      <line x1="30" y1="-51.96" x2="15" y2="-25.98" stroke-width="0.9" stroke-opacity="0.55" />
+      <line x1="60" y1="0" x2="30" y2="0" stroke-width="0.9" stroke-opacity="0.55" />
+      <line x1="30" y1="51.96" x2="15" y2="25.98" stroke-width="0.9" stroke-opacity="0.55" />
+      <line x1="-30" y1="51.96" x2="-15" y2="25.98" stroke-width="0.9" stroke-opacity="0.55" />
+      <line x1="-60" y1="0" x2="-30" y2="0" stroke-width="0.9" stroke-opacity="0.55" />
+      <line x1="-30" y1="-51.96" x2="-15" y2="-25.98" stroke-width="0.9" stroke-opacity="0.55" />
+    </g>
+  </defs>
+  <!-- Staggered hexagonal grid (honeycomb / mechanical assembly layout) -->
+  <use href="#hex-nut" x="60" y="52" />
+  <use href="#hex-nut" x="180" y="156" />
+  <!-- Outer connecting honeycomb lines -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-opacity="0.65">
+    <polygon points="210,0 240,52 210,104 150,104 120,52 150,0" />
+    <polygon points="90,104 120,156 90,208 30,208 0,156 30,104" />
+  </g>
+</svg>

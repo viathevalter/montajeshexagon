@@ -1,0 +1,1142 @@
+{
+  "es": {
+    "langCode": "es",
+    "eyebrow": "CAPACIDAD TÉCNICA EN PLANTA",
+    "headline": "Servicios Técnicos en las Instalaciones del Cliente",
+    "lead": "Detalle objetivo del tipo de trabajo que ejecutamos en fábrica y la información técnica que su empresa debe facilitarnos para recibir una propuesta cerrada y ajustada a pliego.",
+    "scopeTag": "ESPAÑA &nbsp;·&nbsp; UNIÓN EUROPEA",
+    "reqSummary": "Datos para solicitar presupuesto",
+    "reqToggle": "Ver requisitos técnicos &nbsp;→",
+    "quoteBtnDefault": "Solicitar presupuesto &nbsp;↗",
+    "quoteBtnService09": "Solicitar perfiles para proyecto &nbsp;↗",
+    "bannerEyebrow": "REFUERZO PARA SU PROYECTO",
+    "bannerTitle": "Profesionales especializados",
+    "bannerDesc": "Equipos técnicos para paradas de planta, puntas de trabajo y proyectos industriales.",
+    "bannerBtn": "Ver perfiles y requisitos &nbsp;→",
+    "services": [
+      {
+        "id": "01",
+        "navTitle": "Montaje industrial",
+        "panelTitle": "Montaje industrial",
+        "badge": "01 / MONTAJE INDUSTRIAL",
+        "img": "assets/images/services/01_montaje_industrial.jpg",
+        "alt": "Montaje industrial de líneas y estructuras",
+        "desc": "Ensamblaje, posicionamiento y fijación mecánica de estructuras metálicas pesadas y ligeras, líneas continuas de producción, bancadas de apoyo, pasarelas técnicas y sistemas estructurales en entorno de fábrica.",
+        "tags": [
+          "Estructuras metálicas",
+          "Líneas de producción",
+          "Montaje en planta"
+        ],
+        "reqs": [
+          "Planos generales de montaje y memoria descriptiva.",
+          "Dimensiones y pesos estimados de los elementos.",
+          "Medios de elevación e izado disponibles en la planta.",
+          "Fechas límite de ejecución y ventana de parada."
+        ],
+        "quoteTarget": "Montaje Industrial"
+      },
+      {
+        "id": "02",
+        "navTitle": "Mantenimiento industrial",
+        "panelTitle": "Mantenimiento industrial",
+        "badge": "02 / MANTENIMIENTO INDUSTRIAL",
+        "img": "assets/images/services/02_mantenimiento_industrial.jpg",
+        "alt": "Mantenimiento preventivo y correctivo en planta",
+        "desc": "Intervenciones mecánicas preventivas y correctivas en planta. Ejecución de trabajos intensivos durante paradas técnicas programadas (revampings) orientadas a minimizar tiempos de indisponibilidad y optimizar el rendimiento de la maquinaria.",
+        "tags": [
+          "Mantenimiento preventivo",
+          "Paradas técnicas",
+          "Maquinaria rotativa"
+        ],
+        "reqs": [
+          "Tipo de instalación y componentes mecánicos a intervenir.",
+          "Historial de mantenimiento o alcance de la revisión requerida.",
+          "Ventana operativa y fechas programadas de la parada de planta.",
+          "Requisitos específicos de prevención y accesos a zona confinada."
+        ],
+        "quoteTarget": "Mantenimiento Industrial"
+      },
+      {
+        "id": "03",
+        "navTitle": "Soldadura técnica",
+        "panelTitle": "Soldadura técnica",
+        "badge": "03 / SOLDADURA TÉCNICA",
+        "img": "assets/images/services/03_soldadura_tecnica.jpg",
+        "alt": "Soldadura homologada TIG MIG MAG electrodo",
+        "desc": "Procedimientos de soldadura homologada en campo y taller: TIG (GTAW), MIG-MAG (GMAW/FCAW) y electrodo revestido (SMAW). Trabajos en acero al carbono, acero inoxidable, aceros aleados y recipientes a presión con control radiográfico y END.",
+        "tags": [
+          "Soldadura TIG / MIG-MAG",
+          "Homologación ASME / EN",
+          "Control END"
+        ],
+        "reqs": [
+          "Procedimiento de soldadura requerido (WPS) y cualificaciones (WPQR).",
+          "Tipo de material base, espesores y diámetros de tubería/chapa.",
+          "Ensayos no destructivos exigidos (Líquidos penetrantes, RX, Ultrasonidos).",
+          "Condiciones de trabajo (taller, campo, altura, espacio confinado)."
+        ],
+        "quoteTarget": "Soldadura Técnica"
+      },
+      {
+        "id": "04",
+        "navTitle": "Montaje de tuberías (Piping)",
+        "panelTitle": "Montaje de tuberías (Piping)",
+        "badge": "04 / MONTAJE DE TUBERÍAS (PIPING)",
+        "img": "assets/images/services/04_montaje_tuberias_piping.jpg",
+        "alt": "Montaje de redes de tubería industrial piping",
+        "desc": "Trazado, replanteo, ajuste de spools, soldadura y montaje de redes de tubería para procesos químicos, vapor, condensados, fluidos térmicos, gas, aire comprimido y redes contra incendios (PCI) bajo rigurosas tolerancias isométricas.",
+        "tags": [
+          "Spools y prefabricación",
+          "Líneas de vapor y químicos",
+          "Pruebas hidrostáticas"
+        ],
+        "reqs": [
+          "Planos isométricos y diagramas P&ID del trazado.",
+          "Materiales de tubería (acero al carbono, inoxidable, dúplex, etc.).",
+          "Presión y temperatura de diseño del fluido a transportar.",
+          "Disponibilidad de prefabricación en taller o necesidad de ejecución in situ."
+        ],
+        "quoteTarget": "Montaje de Tuberías (Piping)"
+      },
+      {
+        "id": "05",
+        "navTitle": "Calderería y ensamblaje",
+        "panelTitle": "Calderería y ensamblaje",
+        "badge": "05 / CALDERERÍA Y ENSAMBLAJE",
+        "img": "assets/images/services/05_caldereria_ensamblaje.jpg",
+        "alt": "Calderería industrial depósitos tolvas conductos",
+        "desc": "Fabricación in situ, modificación y ensamblaje de piezas de calderería media y pesada: conductos de humos, tolvas, silos, ciclones, depósitos de almacenamiento y virolas en chapa de diversos espesores y aleaciones.",
+        "tags": [
+          "Calderería pesada",
+          "Tolvas, silos y depósitos",
+          "Conformado de virolas"
+        ],
+        "reqs": [
+          "Planos de fabricación o despiece de calderería.",
+          "Especificaciones de materiales (calidad de chapa, espesor, recubrimientos).",
+          "Criterios de tolvas, conductos o recipientes a intervenir.",
+          "Accesos y medios auxiliares en la ubicación de montaje."
+        ],
+        "quoteTarget": "Calderería y Estructuras"
+      },
+      {
+        "id": "06",
+        "navTitle": "Mecánica industrial",
+        "panelTitle": "Mecánica industrial",
+        "badge": "06 / MECÁNICA INDUSTRIAL",
+        "img": "assets/images/services/06_mecanica_industrial.jpg",
+        "alt": "Mecánica industrial y alineación láser de ejes",
+        "desc": "Ajuste, nivelación, calzado de precisión y alineación láser de ejes en equipos rotativos críticos: bombas centrífugas, reductores, compresores, turbinas, ventiladores industriales y motores de accionamiento continuo.",
+        "tags": [
+          "Alineación láser",
+          "Equipos rotativos",
+          "Bombas y reductores"
+        ],
+        "reqs": [
+          "Tipo y modelo de equipo rotativo (bomba, reductor, turbina, ventilador).",
+          "Protocolos de alineación tolerados y valores de vibración de referencia.",
+          "Estado de bancadas y necesidad de nivelación o sustitución de rodamientos.",
+          "Medios de elevación para desmontaje y montaje de componentes pesados."
+        ],
+        "quoteTarget": "Mecánica Industrial"
+      },
+      {
+        "id": "07",
+        "navTitle": "Instalación y reparación",
+        "panelTitle": "Instalación y reparación",
+        "badge": "07 / INSTALACIÓN Y REPARACIÓN",
+        "img": "assets/images/services/07_instalacion_reparacion.jpg",
+        "alt": "Instalación de maquinaria y líneas de producción",
+        "desc": "Montaje llave en mano de maquinaria nueva o reubicada, anclaje químico/mecánico a cimentación, interconexión de servicios auxiliares y reparación urgente de averías mecánicas imprevistas con cuadrillas de intervención rápida.",
+        "tags": [
+          "Montaje llave en mano",
+          "Anclaje a cimentación",
+          "Intervención rápida"
+        ],
+        "reqs": [
+          "Especificaciones de la máquina o línea de producción a instalar.",
+          "Requisitos de anclaje a cimentación y nivelación de bancadas.",
+          "Suministros auxiliares necesarios (aire, agua, lubricación, electricidad).",
+          "Plazos de ejecución y ventana para puesta a punto o arranque en vacío."
+        ],
+        "quoteTarget": "Instalación y Reparación"
+      },
+      {
+        "id": "08",
+        "navTitle": "Trabajos auxiliares",
+        "panelTitle": "Trabajos auxiliares",
+        "badge": "08 / TRABAJOS AUXILIARES",
+        "img": "assets/images/services/08_trabajos_auxiliares.jpg",
+        "alt": "Trabajos auxiliares izado y apoyo a ingeniería",
+        "desc": "Apoyo integral a contratas principales e ingenierías: descarga y estibado técnico de componentes, maniobras de izado complejas con eslingas certificadas, preparación de accesos, trabajos en altura y replanteos topográficos previos.",
+        "tags": [
+          "Maniobras de izado",
+          "Trabajos en altura",
+          "Apoyo a contratas"
+        ],
+        "reqs": [
+          "Alcance específico de los trabajos auxiliares requeridos.",
+          "Pesos y dimensiones de las cargas a maniobrar o izar.",
+          "Requisitos de trabajos en altura (andamios, plataformas elevadoras PEMP).",
+          "Calendario previsto de colaboración con la contrata principal."
+        ],
+        "quoteTarget": "Trabajos Auxiliares"
+      },
+      {
+        "id": "09",
+        "navTitle": "Profesionales especializados",
+        "panelTitle": "Profesionales Especializados para Proyectos Industriales",
+        "badge": "09 / PROFESIONALES ESPECIALIZADOS",
+        "img": "assets/images/services/09_profesionales_especializados.jpg",
+        "alt": "Equipo técnico de profesionales industriales Hexagon",
+        "desc": "Equipos técnicos y perfiles especializados para paradas de planta, puntas de trabajo y refuerzo de proyectos industriales. Selección técnica y coordinación directa de especialistas para cubrir las necesidades operativas de cada instalación.",
+        "tags": [
+          "Soldadores homologados",
+          "Tuberos montadores",
+          "Mecánicos y caldereros"
+        ],
+        "profiles": [
+          {
+            "title": "Soldadores homologados",
+            "desc": "Procedimientos TIG, MIG/MAG y electrodo bajo normas ASME IX y EN ISO 9606-1."
+          },
+          {
+            "title": "Caldereros industriales",
+            "desc": "Trazado, corte, conformado y ensamblaje de virolas, tolvas y conductos."
+          },
+          {
+            "title": "Tuberos industriales",
+            "desc": "Interpretación de isométricas, replanteo de trazados, biselado y punteo de spools."
+          },
+          {
+            "title": "Montadores de estructuras",
+            "desc": "Montaje mecánico en altura, nivelación de pórticos y apriete controlado de uniones."
+          },
+          {
+            "title": "Mecánicos industriales",
+            "desc": "Mantenimiento preventivo, ajuste de tolerancias, rodamientos y alineación de equipos rotativos."
+          }
+        ],
+        "reqs": [
+          "Perfiles técnicos y especialidades necesarias.",
+          "Cantidad aproximada de profesionales requeridos.",
+          "Ubicación física de la planta o centro de trabajo.",
+          "Homologaciones específicas requeridas (ej. 6G ASME IX, ISO 9606-1, formación PRL/CAE)."
+        ],
+        "quoteTarget": "Profesionales Especializados"
+      }
+    ]
+  },
+  "en": {
+    "langCode": "en",
+    "eyebrow": "ON-SITE TECHNICAL CAPACITY",
+    "headline": "Technical Services at Client Facilities",
+    "lead": "Objective specification of services executed on-site and technical parameters required from your engineering team to issue a fixed, binding commercial proposal.",
+    "scopeTag": "SPAIN &nbsp;·&nbsp; EUROPEAN UNION",
+    "reqSummary": "Parameters required for quotation",
+    "reqToggle": "View technical requirements &nbsp;→",
+    "quoteBtnDefault": "Request Quotation &nbsp;↗",
+    "quoteBtnService09": "Request Project Personnel &nbsp;↗",
+    "bannerEyebrow": "SUPPORT FOR YOUR PROJECT",
+    "bannerTitle": "Specialised Professionals",
+    "bannerDesc": "Technical teams for plant turnarounds, peak workloads, and industrial projects.",
+    "bannerBtn": "View profiles and requirements &nbsp;→",
+    "services": [
+      {
+        "id": "01",
+        "navTitle": "Industrial assembly",
+        "panelTitle": "Industrial Assembly & Erection",
+        "badge": "01 / INDUSTRIAL ASSEMBLY",
+        "img": "assets/images/services/01_montaje_industrial.jpg",
+        "alt": "Industrial assembly of manufacturing lines and structural steel",
+        "desc": "Assembly, positioning, and mechanical securing of heavy and light structural steel, continuous manufacturing lines, machine beds, access walkways, and structural plant systems.",
+        "tags": [
+          "Structural Steel",
+          "Production Lines",
+          "On-Site Assembly"
+        ],
+        "reqs": [
+          "General assembly drawings and technical narrative.",
+          "Estimated dimensions and weights of structural members.",
+          "On-site craneage and rigging equipment available.",
+          "Turnaround deadlines and plant shutdown windows."
+        ],
+        "quoteTarget": "Montaje Industrial"
+      },
+      {
+        "id": "02",
+        "navTitle": "Industrial maintenance",
+        "panelTitle": "Industrial Maintenance & Turnarounds",
+        "badge": "02 / INDUSTRIAL MAINTENANCE",
+        "img": "assets/images/services/02_mantenimiento_industrial.jpg",
+        "alt": "Preventive and corrective plant maintenance",
+        "desc": "Preventive and corrective mechanical maintenance at plant facilities. Intensive execution during scheduled turnaround outages to eliminate unplanned downtime and maximise equipment reliability.",
+        "tags": [
+          "Preventive Maintenance",
+          "Plant Outages",
+          "Rotating Equipment"
+        ],
+        "reqs": [
+          "Plant subsystem description and mechanical components to service.",
+          "Maintenance history and technical overhaul scope.",
+          "Planned shutdown schedule and critical path milestones.",
+          "EHS safety protocols and confined space access clearance."
+        ],
+        "quoteTarget": "Mantenimiento Industrial"
+      },
+      {
+        "id": "03",
+        "navTitle": "Technical welding",
+        "panelTitle": "Technical & Certified Welding",
+        "badge": "03 / CERTIFIED WELDING",
+        "img": "assets/images/services/03_soldadura_tecnica.jpg",
+        "alt": "Certified welding TIG MIG MAG stick",
+        "desc": "Qualified welding procedures in the shop and field: TIG (GTAW), MIG-MAG (GMAW/FCAW), and stick (SMAW). Carbon steel, stainless steel, alloyed piping, and pressure vessels with 100% NDT and radiographic inspection.",
+        "tags": [
+          "TIG / MIG-MAG Welding",
+          "ASME / EN Qualifications",
+          "NDT Testing"
+        ],
+        "reqs": [
+          "Required Welding Procedure Specification (WPS) and WPQR qualifications.",
+          "Base material grades, pipe wall thicknesses, and plate gauges.",
+          "Non-destructive testing requirements (Dye penetrant, RT, UT).",
+          "Working environment (shop, field, working at height, confined space)."
+        ],
+        "quoteTarget": "Soldadura Homologada"
+      },
+      {
+        "id": "04",
+        "navTitle": "Industrial piping (Piping)",
+        "panelTitle": "Industrial Piping (Piping & Spools)",
+        "badge": "04 / INDUSTRIAL PIPING",
+        "img": "assets/images/services/04_montaje_tuberias_piping.jpg",
+        "alt": "Industrial process piping installation",
+        "desc": "Layout routing, field measurement, spool fitting, welding, and erection of process piping networks: chemical fluids, high-pressure steam, condensate, gas, compressed air, and fire protection systems (FPS) to strict isometric tolerances.",
+        "tags": [
+          "Spools & Prefabrication",
+          "Steam & Chemical Lines",
+          "Hydrostatic Testing"
+        ],
+        "reqs": [
+          "Piping isometric drawings and process P&ID schematics.",
+          "Piping metallurgy (carbon steel, 316L, duplex alloys).",
+          "Design pressure and operating temperature ratings.",
+          "Shop spool prefabrication requirements vs. field stick-built erection."
+        ],
+        "quoteTarget": "Tubería y Calderería"
+      },
+      {
+        "id": "05",
+        "navTitle": "Boilermaking & assembly",
+        "panelTitle": "Boilermaking & Steel Fabrication",
+        "badge": "05 / BOILERMAKING & FABRICATION",
+        "img": "assets/images/services/05_caldereria_ensamblaje.jpg",
+        "alt": "Heavy industrial boilermaking silos hoppers ducts",
+        "desc": "On-site fabrication, modification, and mechanical assembly of medium and heavy platework: flue gas ducting, hoppers, silos, cyclones, atmospheric tanks, and rolled plate shells across multiple alloy grades.",
+        "tags": [
+          "Heavy Boilermaking",
+          "Hoppers, Silos & Tanks",
+          "Shell Rolling"
+        ],
+        "reqs": [
+          "Detailed fabrication drawings and bill of materials.",
+          "Material specifications (plate grades, thicknesses, coating specs).",
+          "Vessel or duct geometry and operating parameters.",
+          "Rigging clearances and staging access at the installation location."
+        ],
+        "quoteTarget": "Tubería y Calderería"
+      },
+      {
+        "id": "06",
+        "navTitle": "Industrial mechanics",
+        "panelTitle": "Industrial Mechanics & Alignment",
+        "badge": "06 / INDUSTRIAL MECHANICS",
+        "img": "assets/images/services/06_mecanica_industrial.jpg",
+        "alt": "Industrial rotating machinery and laser alignment",
+        "desc": "Precision leveling, shimming, optical and laser shaft alignment of critical rotating machinery: centrifugal pumps, industrial gearboxes, compressors, steam turbines, blowers, and high-duty mechanical drives.",
+        "tags": [
+          "Laser Alignment",
+          "Rotating Equipment",
+          "Pumps & Gearboxes"
+        ],
+        "reqs": [
+          "Rotating asset type, model, and operational specifications.",
+          "Permissible alignment tolerances and baseline vibration levels.",
+          "Soleplate and foundation status; bearing replacement scope.",
+          "Lifting overhead clearance for heavy casing and rotor handling."
+        ],
+        "quoteTarget": "Mecánica Industrial"
+      },
+      {
+        "id": "07",
+        "navTitle": "Installation & repairs",
+        "panelTitle": "Installation & Mechanical Repair",
+        "badge": "07 / INSTALLATION & REPAIR",
+        "img": "assets/images/services/07_instalacion_reparacion.jpg",
+        "alt": "Turnkey machinery installation and plant commissioning",
+        "desc": "Turnkey installation of newly delivered or relocated production machinery, chemical and mechanical anchor bolting, auxiliary utility interconnections, and rapid-response mechanical repairs by specialized fly-out squads.",
+        "tags": [
+          "Turnkey Installation",
+          "Foundation Anchoring",
+          "Rapid Intervention"
+        ],
+        "reqs": [
+          "Machinery manufacturer specifications and layout prints.",
+          "Foundation anchoring, grouting, and levelling specifications.",
+          "Utility connection requirements (compressed air, cooling water, power).",
+          "Commissioning window, dry-run scheduling, and startup deadlines."
+        ],
+        "quoteTarget": "Mantenimiento de Líneas"
+      },
+      {
+        "id": "08",
+        "navTitle": "Auxiliary works",
+        "panelTitle": "Mechanical Rigging & Auxiliary Works",
+        "badge": "08 / AUXILIARY RIGGING",
+        "img": "assets/images/services/08_trabajos_auxiliares.jpg",
+        "alt": "Auxiliary heavy rigging and engineering support",
+        "desc": "Turnkey support for prime contractors and EPCs: offloading, rigging, and staging of heavy industrial components, certified tandem crane lifts, temporary scaffolding coordination, and high-elevation work.",
+        "tags": [
+          "Heavy Rigging & Lifting",
+          "Working at Height",
+          "EPC Support"
+        ],
+        "reqs": [
+          "Exact scope of auxiliary rigging and support services required.",
+          "Dimensions, center of gravity, and tare weights of heavy lifts.",
+          "Access constraints and mobile crane positioning ground bearing tests.",
+          "Operational coordination calendar with principal site contractor."
+        ],
+        "quoteTarget": "Paradas de Planta"
+      },
+      {
+        "id": "09",
+        "navTitle": "Specialised professionals",
+        "panelTitle": "Specialised Technical Personnel & Project Crews",
+        "badge": "09 / SPECIALISED PROFESSIONALS",
+        "img": "assets/images/services/09_profesionales_especializados.jpg",
+        "alt": "Hexagon industrial specialised technical workforce",
+        "desc": "Dedicated technical squads and trade profiles for plant turnaround shutdowns, peak workloads, and on-site mechanical projects. Technical vetting and on-site crew coordination tailored to client industrial operations.",
+        "tags": [
+          "Certified Welders",
+          "Pipefitters & Fabricators",
+          "Industrial Mechanics"
+        ],
+        "profiles": [
+          {
+            "title": "Certified Welders",
+            "desc": "TIG, MIG/MAG, and MMA procedures certified under ASME IX and EN ISO 9606-1 standards."
+          },
+          {
+            "title": "Heavy Boilermakers",
+            "desc": "Layout drafting, plasma cutting, plate forming, and structural assembly of vessels and ducting."
+          },
+          {
+            "title": "Process Pipefitters",
+            "desc": "Isometric reading, spool fit-up, beveling, and tacking for high-pressure lines."
+          },
+          {
+            "title": "Structural Riggers & Fitters",
+            "desc": "Mechanical erection at height, portal frame alignment, and controlled-torque bolting."
+          },
+          {
+            "title": "Industrial Mechanics",
+            "desc": "Preventive overhaul, rotating equipment alignment, tolerances, and bearing replacement."
+          }
+        ],
+        "reqs": [
+          "Trade profiles and technical qualifications required.",
+          "Estimated headcount and crew sizing.",
+          "Plant location and site access requirements.",
+          "Expected project duration, shift patterns, and start date."
+        ],
+        "quoteTarget": "Profesionales Especializados"
+      }
+    ]
+  },
+  "it": {
+    "langCode": "it",
+    "eyebrow": "CAPACITÀ TECNICA IN IMPIANTO",
+    "headline": "Servizi Tecnici presso gli Impianti del Cliente",
+    "lead": "Dettaglio oggettivo degli interventi eseguiti in impianto e parametri tecnici necessari per elaborare un preventivo vincolante conforme al capitolato.",
+    "scopeTag": "SPAGNA &nbsp;·&nbsp; UNIONE EUROPEA",
+    "reqSummary": "Dati per richiedere preventivo",
+    "reqToggle": "Vedi requisiti tecnici &nbsp;→",
+    "quoteBtnDefault": "Richiedi preventivo &nbsp;↗",
+    "quoteBtnService09": "Richiedi personale per progetto &nbsp;↗",
+    "bannerEyebrow": "SUPPORTO PER IL TUO PROGETTO",
+    "bannerTitle": "Professionisti specializzati",
+    "bannerDesc": "Team tecnici per fermate d'impianto, picchi di lavoro e progetti industriali.",
+    "bannerBtn": "Vedi profili e requisiti &nbsp;→",
+    "services": [
+      {
+        "id": "01",
+        "navTitle": "Montaggio industriale",
+        "panelTitle": "Montaggio Industriale",
+        "badge": "01 / MONTAGGIO INDUSTRIALE",
+        "img": "assets/images/services/01_montaje_industrial.jpg",
+        "alt": "Montaggio industriale di linee e strutture",
+        "desc": "Assemblaggio, posizionamento e fissaggio meccanico di carpenteria metallica pesante e leggera, linee di produzione continue, basamenti, passerelle tecniche e strutture d'impianto.",
+        "tags": [
+          "Carpenteria metallica",
+          "Linee di produzione",
+          "Montaggio in loco"
+        ],
+        "reqs": [
+          "Disegni generali di montaggio e relazione tecnica descrittiva.",
+          "Dimensioni e pesi stimati degli elementi strutturali.",
+          "Mezzi di sollevamento disponibili presso lo stabilimento.",
+          "Scadenze di consegna e finestre temporali di fermata."
+        ],
+        "quoteTarget": "Montaje Industrial"
+      },
+      {
+        "id": "02",
+        "navTitle": "Manutenzione industriale",
+        "panelTitle": "Manutenzione Industriale e Fermate",
+        "badge": "02 / MANUTENZIONE INDUSTRIALE",
+        "img": "assets/images/services/02_mantenimiento_industrial.jpg",
+        "alt": "Manutenzione preventiva e correttiva in impianto",
+        "desc": "Interventi meccanici preventivi e correttivi in stabilimento. Lavori intensivi durante le fermate d'impianto programmate volti a ridurre i tempi di inattività e massimizzare l'affidabilità dei macchinari.",
+        "tags": [
+          "Manutenzione preventiva",
+          "Fermate tecniche",
+          "Macchine rotanti"
+        ],
+        "reqs": [
+          "Tipologia di impianto e componenti meccanici su cui intervenire.",
+          "Storico manutentivo o perimetro della revisione richiesta.",
+          "Finestra operativa e date programmate per la fermata.",
+          "Requisiti specifici di sicurezza e accesso a spazi confinati."
+        ],
+        "quoteTarget": "Mantenimiento Industrial"
+      },
+      {
+        "id": "03",
+        "navTitle": "Saldatura tecnica",
+        "panelTitle": "Saldatura Tecnica e Qualificata",
+        "badge": "03 / SALDATURA QUALIFICATA",
+        "img": "assets/images/services/03_soldadura_tecnica.jpg",
+        "alt": "Saldatura qualificata TIG MIG MAG elettrodo",
+        "desc": "Procedimenti di saldatura qualificati in officina e cantiere: TIG (GTAW), MIG-MAG (GMAW/FCAW) ed elettrodo rivestito (SMAW). Acciaio al carbonio, inox, leghe speciali e recipienti a pressione con controlli NDT.",
+        "tags": [
+          "Saldatura TIG / MIG-MAG",
+          "Qualifiche ASME / EN",
+          "Controlli CND / NDT"
+        ],
+        "reqs": [
+          "Specifiche di procedura (WPS) e qualifiche richieste (WPQR).",
+          "Tipologia di materiale base, spessori e diametri tubazioni.",
+          "Controlli non distruttivi prescritti (Liquidi penetranti, RX, US).",
+          "Condizioni operative (officina, cantiere, quota, spazio confinato)."
+        ],
+        "quoteTarget": "Soldadura Homologada"
+      },
+      {
+        "id": "04",
+        "navTitle": "Montaggio tubazioni (Piping)",
+        "panelTitle": "Montaggio Tubazioni e Piping",
+        "badge": "04 / MONTAGGIO TUBAZIONI PIPING",
+        "img": "assets/images/services/04_montaje_tuberias_piping.jpg",
+        "alt": "Montaggio tubazioni industriali e piping",
+        "desc": "Tracciamento, prefabbricazione spools, saldatura e montaggio di reti di tubazioni di processo: fluidi chimici, vapore ad alta pressione, gas, aria compressa e reti antincendio secondo rigorose tolleranze isometriche.",
+        "tags": [
+          "Spools e prefabbricazione",
+          "Linee vapore e chimica",
+          "Collaudi idrostatici"
+        ],
+        "reqs": [
+          "Disegni isometrici e schemi P&ID del tracciato.",
+          "Materiali tubazioni (acciaio al carbonio, inox, duplex, leghe).",
+          "Pressione e temperatura di progetto del fluido.",
+          "Disponibilità di prefabbricazione in officina o posa in cantiere."
+        ],
+        "quoteTarget": "Tubería y Calderería"
+      },
+      {
+        "id": "05",
+        "navTitle": "Caldareria e carpenteria",
+        "panelTitle": "Caldareria Pesante e Carpenteria",
+        "badge": "05 / CALDARERIA E CARPENTERIA",
+        "img": "assets/images/services/05_caldereria_ensamblaje.jpg",
+        "alt": "Caldareria industriale silos tramogge condotte",
+        "desc": "Fabbricazione in loco, modifica e assemblaggio meccanico di caldareria media e pesante: condotte fumi, tramogge, sili, cicloni, serbatoi e virole in lamiere di vari spessori e leghe.",
+        "tags": [
+          "Caldareria pesante",
+          "Sili, tramogge e serbatoi",
+          "Formatura virole"
+        ],
+        "reqs": [
+          "Disegni di costruzione e distinte base della caldareria.",
+          "Specifiche dei materiali (qualità lamiere, spessori, rivestimenti).",
+          "Geometria e parametri operativi di serbatoi o condotte.",
+          "Spazi di manovra e mezzi ausiliari nell'area di installazione."
+        ],
+        "quoteTarget": "Tubería y Calderería"
+      },
+      {
+        "id": "06",
+        "navTitle": "Meccanica industriale",
+        "panelTitle": "Meccanica Industriale e Allineamento",
+        "badge": "06 / MECCANICA INDUSTRIALE",
+        "img": "assets/images/services/06_mecanica_industrial.jpg",
+        "alt": "Meccanica macchine rotanti e allineamento laser",
+        "desc": "Livellamento di precisione, calettamento e allineamento laser alberi su macchine rotanti critiche: pompe centrifughe, riduttori, compressori, turbine industriali, ventilatori e motori a servizio continuo.",
+        "tags": [
+          "Allineamento laser",
+          "Macchine rotanti",
+          "Pompe e riduttori"
+        ],
+        "reqs": [
+          "Modello e specifiche operative del macchinario rotante.",
+          "Tolleranze di allineamento ammissibili e livelli di vibrazione.",
+          "Stato basamenti; eventuale sostituzione cuscinetti o tenute.",
+          "Mezzi di sollevamento per lo smontaggio e movimentazione rotori."
+        ],
+        "quoteTarget": "Mecánica Industrial"
+      },
+      {
+        "id": "07",
+        "navTitle": "Installazione e riparazione",
+        "panelTitle": "Installazione e Revisione Linee",
+        "badge": "07 / INSTALLAZIONE E REVISIONE",
+        "img": "assets/images/services/07_instalacion_reparacion.jpg",
+        "alt": "Installazione macchinari e avviamento impianti",
+        "desc": "Montaggio chiavi in mano di macchinari nuovi o rilocalizzati, ancoraggio chimico/meccanico, interconnessione delle utenze ausiliarie e pronto intervento meccanico con squadre specializzate.",
+        "tags": [
+          "Montaggio chiavi in mano",
+          "Ancoraggio strutturale",
+          "Pronto intervento"
+        ],
+        "reqs": [
+          "Specifiche tecniche e planimetrie del macchinario o linea.",
+          "Requisiti di ancoraggio a basamento e livellamento.",
+          "Allacciamenti utenze necessari (aria, acqua, lubrificazione, energia).",
+          "Finestra temporale per collaudo a vuoto e avviamento."
+        ],
+        "quoteTarget": "Mantenimiento de Líneas"
+      },
+      {
+        "id": "08",
+        "navTitle": "Lavori ausiliari",
+        "panelTitle": "Lavori Meccanici Ausiliari",
+        "badge": "08 / LAVORI AUSILIARI",
+        "img": "assets/images/services/08_trabajos_auxiliares.jpg",
+        "alt": "Lavori ausiliari sollevamento e supporto cantieri",
+        "desc": "Supporto specialistico per general contractor ed EPC: scarico e stoccaggio tecnico di componenti pesanti, manovre di tiro complesse con imbracature certificate, opere in quota e rilievi topografici.",
+        "tags": [
+          "Manovre di sollevamento",
+          "Lavori in quota",
+          "Supporto contractor"
+        ],
+        "reqs": [
+          "Perimetro dettagliato dei servizi ausiliari richiesti.",
+          "Pesi, sagoma e baricentro dei componenti da sollevare.",
+          "Condizioni del suolo e vincoli per il posizionamento autogru.",
+          "Cronoprogramma operativo integrato con il cantiere generale."
+        ],
+        "quoteTarget": "Paradas de Planta"
+      },
+      {
+        "id": "09",
+        "navTitle": "Professionisti specializzati",
+        "panelTitle": "Professionisti Specializzati per Progetti Industriali",
+        "badge": "09 / PROFESSIONISTI SPECIALIZZATI",
+        "img": "assets/images/services/09_profesionales_especializados.jpg",
+        "alt": "Squadra tecnica di professionisti industriali Hexagon",
+        "desc": "Squadre tecniche e profili specialistici per fermate d'impianto, picchi di lavoro e progetti industriali. Selezione rigorosa e coordinamento diretto sul campo per soddisfare le esigenze di ogni stabilimento.",
+        "tags": [
+          "Saldatori qualificati",
+          "Tubisti montatori",
+          "Meccanici e calderai"
+        ],
+        "profiles": [
+          {
+            "title": "Saldatori qualificati",
+            "desc": "Processi TIG, MIG/MAG ed elettrodo certificati secondo ASME IX ed EN ISO 9606-1."
+          },
+          {
+            "title": "Calderai industriali",
+            "desc": "Tracciamento, taglio plasma, calandratura e assemblaggio di virole e condotte."
+          },
+          {
+            "title": "Tubisti industriali",
+            "desc": "Lettura disegni isometrici, rilievo quote, smussatura e puntatura spools."
+          },
+          {
+            "title": "Montatori meccanici",
+            "desc": "Montaggio carpenterie in quota, allineamento portali e serraggio dinamometrico."
+          },
+          {
+            "title": "Meccanici industriali",
+            "desc": "Manutenzione preventiva, tolleranze, sostituzione cuscinetti e allineamento macchine."
+          }
+        ],
+        "reqs": [
+          "Profili tecnici e specializzazioni richieste.",
+          "Numero approssimativo di professionisti necessari.",
+          "Localizzazione dello stabilimento o cantiere.",
+          "Qualifiche ed attestati specifici (es. 6G ASME, ISO 9606, corsi sicurezza)."
+        ],
+        "quoteTarget": "Profesionales Especializados"
+      }
+    ]
+  },
+  "fr": {
+    "langCode": "fr",
+    "eyebrow": "CAPACITÉ TECHNIQUE SUR SITE",
+    "headline": "Services Techniques sur les Sites Clients",
+    "lead": "Spécification technique détaillée des prestations sur site et paramètres nécessaires pour l'élaboration d'un devis ferme conforme à votre cahier des charges.",
+    "scopeTag": "ESPAGNE &nbsp;·&nbsp; UNION EUROPÉENNE",
+    "reqSummary": "Éléments pour demande de devis",
+    "reqToggle": "Voir les prérequis techniques &nbsp;→",
+    "quoteBtnDefault": "Demander un devis &nbsp;↗",
+    "quoteBtnService09": "Demander du personnel pour projet &nbsp;↗",
+    "bannerEyebrow": "RENFORT POUR VOTRE PROJET",
+    "bannerTitle": "Professionnels spécialisés",
+    "bannerDesc": "Équipes techniques pour arrêts d'usine, pointes de charge et projets industriels.",
+    "bannerBtn": "Voir les profils et exigences &nbsp;→",
+    "services": [
+      {
+        "id": "01",
+        "navTitle": "Montage industriel",
+        "panelTitle": "Montage Industriel sur Site",
+        "badge": "01 / MONTAGE INDUSTRIEL",
+        "img": "assets/images/services/01_montaje_industrial.jpg",
+        "alt": "Montage industriel de lignes et charpentes",
+        "desc": "Assemblage, positionnement et fixation mécanique de structures métalliques lourdes et légères, lignes continues de production, bâtis de machines, passerelles et sous-ensembles d'usine.",
+        "tags": [
+          "Charpente métallique",
+          "Lignes de production",
+          "Montage sur site"
+        ],
+        "reqs": [
+          "Plans généraux de montage et notice descriptive.",
+          "Dimensions et poids estimés des éléments structuraux.",
+          "Moyens de levage et manutention disponibles dans l'usine.",
+          "Délais d'exécution et créneaux d'arrêt d'installation."
+        ],
+        "quoteTarget": "Montaje Industrial"
+      },
+      {
+        "id": "02",
+        "navTitle": "Maintenance industrielle",
+        "panelTitle": "Maintenance Industrielle & Arrêts d'Usine",
+        "badge": "02 / MAINTENANCE INDUSTRIELLE",
+        "img": "assets/images/services/02_mantenimiento_industrial.jpg",
+        "alt": "Maintenance préventive et corrective en usine",
+        "desc": "Interventions mécaniques préventives et correctives sur site. Travaux intensifs lors des arrêts techniques programmés (revampings) afin de minimiser les temps d'indisponibilité et fiabiliser vos outils.",
+        "tags": [
+          "Maintenance préventive",
+          "Arrêts d'usine",
+          "Machines tournantes"
+        ],
+        "reqs": [
+          "Nature de l'installation et composants mécaniques concernés.",
+          "Historique de maintenance ou périmètre de la révision.",
+          "Planning d'arrêt programmé et jalons critiques.",
+          "Exigences EHS et autorisations d'accès en espace confiné."
+        ],
+        "quoteTarget": "Mantenimiento Industrial"
+      },
+      {
+        "id": "03",
+        "navTitle": "Soudage technique",
+        "panelTitle": "Soudage Technique & Homologué",
+        "badge": "03 / SOUDAGE HOMOLOGUÉ",
+        "img": "assets/images/services/03_soldadura_tecnica.jpg",
+        "alt": "Soudage homologué TIG MIG MAG électrode",
+        "desc": "Modes opératoires de soudage qualifiés en atelier et sur chantier: TIG (GTAW), MIG-MAG (GMAW/FCAW) et électrode enrobée (SMAW). Acier carbone, inox, alliages nobles et appareils sous pression avec contrôles CND.",
+        "tags": [
+          "Soudage TIG / MIG-MAG",
+          "Qualifications ASME / EN",
+          "Contrôles CND"
+        ],
+        "reqs": [
+          "Descriptif de mode opératoire (DMOS/QMOS) exigé.",
+          "Nuances des métaux de base, épaisseurs et diamètres.",
+          "Contrôles non destructifs requis (Ressuage, Radio, Ultrasons).",
+          "Conditions d'intervention (atelier, chantier, hauteur, espace confiné)."
+        ],
+        "quoteTarget": "Soldadura Homologada"
+      },
+      {
+        "id": "04",
+        "navTitle": "Tuyauterie industrielle (Piping)",
+        "panelTitle": "Tuyauterie Industrielle & Piping",
+        "badge": "04 / TUYAUTERIE INDUSTRIELLE",
+        "img": "assets/images/services/04_montaje_tuberias_piping.jpg",
+        "alt": "Tuyauterie industrielle process et spools",
+        "desc": "Traçage, prise de cotes, assemblage de spools, soudage et pose de réseaux de tuyauterie: fluides chimiques, vapeur haute pression, condensats, gaz, air comprimé et réseaux incendie selon tolérances isométriques rigoureuses.",
+        "tags": [
+          "Spools & Préfabrication",
+          "Lignes vapeur & chimie",
+          "Épreuves hydrauliques"
+        ],
+        "reqs": [
+          "Plans isométriques et schémas P&ID du réseau.",
+          "Métallurgie des tuyauteries (acier carbone, 316L, duplex).",
+          "Pression et température de calcul du fluide véhiculé.",
+          "Préfabrication en atelier vs montage direct sur site."
+        ],
+        "quoteTarget": "Tubería y Calderería"
+      },
+      {
+        "id": "05",
+        "navTitle": "Chaudronnerie et assemblage",
+        "panelTitle": "Chaudronnerie Lourde & Métallique",
+        "badge": "05 / CHAUDRONNERIE INDUSTRIELLE",
+        "img": "assets/images/services/05_caldereria_ensamblaje.jpg",
+        "alt": "Chaudronnerie silos trémies gaines cuves",
+        "desc": "Fabrication in situ, modification et assemblage mécanique de pièces de chaudronnerie moyenne et lourde: gaines de fumées, trémies, silos, cyclones, réservoirs de stockage et viroles en fortes épaisseurs.",
+        "tags": [
+          "Chaudronnerie lourde",
+          "Silos, trémies & cuves",
+          "Roulage de viroles"
+        ],
+        "reqs": [
+          "Plans de fabrication et nomenclatures détaillées.",
+          "Spécifications matières (nuances de tôles, épaisseurs, revêtements).",
+          "Conditions de service et géométrie des cuves ou gaines.",
+          "Accès et moyens de manutention sur la zone d'installation."
+        ],
+        "quoteTarget": "Tubería y Calderería"
+      },
+      {
+        "id": "06",
+        "navTitle": "Mécanique industrielle",
+        "panelTitle": "Mécanique Industrielle & Lignage",
+        "badge": "06 / MÉCANIQUE INDUSTRIELLE",
+        "img": "assets/images/services/06_mecanica_industrial.jpg",
+        "alt": "Mécanique industrielle et lignage laser",
+        "desc": "Calage de précision, réglage de jeux et lignage laser d'arbres sur machines tournantes critiques: pompes centrifuges, réducteurs, compresseurs, turbines, ventilateurs et commandes mécaniques industrielles.",
+        "tags": [
+          "Lignage laser",
+          "Machines tournantes",
+          "Pompes & réducteurs"
+        ],
+        "reqs": [
+          "Type et modèle d'équipement tournant (pompe, réducteur, turbine).",
+          "Tolérances d'alignement admissibles et niveaux vibratoires cibles.",
+          "État des massifs; remplacement de roulements ou garnitures.",
+          "Moyens de levage pour dépose et manutention des rotors."
+        ],
+        "quoteTarget": "Mecánica Industrial"
+      },
+      {
+        "id": "07",
+        "navTitle": "Installation et réparation",
+        "panelTitle": "Rénovation & Mise en Service de Lignes",
+        "badge": "07 / INSTALLATION & RÉNOVATION",
+        "img": "assets/images/services/07_instalacion_reparacion.jpg",
+        "alt": "Installation machines neuves et mise en service",
+        "desc": "Montage clé en main de machines neuves ou transférées, scellement chimique et mécanique, raccordement des servitudes et dépannage mécanique urgent par équipes mobiles spécialisées.",
+        "tags": [
+          "Montage clé en main",
+          "Ancrage sur massif",
+          "Intervention rapide"
+        ],
+        "reqs": [
+          "Notice constructeur et plans d'implantation de la machine.",
+          "Prescriptions d'ancrage, scellement et calage au sol.",
+          "Utilités requises (air comprimé, eau, graissage, électricité).",
+          "Plage horaire pour essais à vide et mise en service."
+        ],
+        "quoteTarget": "Mantenimiento de Líneas"
+      },
+      {
+        "id": "08",
+        "navTitle": "Travaux auxiliaires",
+        "panelTitle": "Travaux Mécaniques Auxiliaires",
+        "badge": "08 / TRAVAUX AUXILIAIRES",
+        "img": "assets/images/services/08_trabajos_auxiliares.jpg",
+        "alt": "Travaux auxiliaires levage et support chantiers",
+        "desc": "Assistance complète aux entreprises générales et ingénieries: déchargement et stockage technique de charges lourdes, élingage certifié, travaux en hauteur et relevés d'implantation préalables.",
+        "tags": [
+          "Opérations de levage",
+          "Travaux en hauteur",
+          "Support ingénierie"
+        ],
+        "reqs": [
+          "Périmètre précis des prestations d'assistance requises.",
+          "Poids, dimensions et centre de gravité des charges à lever.",
+          "Contraintes de portance au sol pour le positionnement de grues.",
+          "Planning prévisionnel de coactivité sur le chantier."
+        ],
+        "quoteTarget": "Paradas de Planta"
+      },
+      {
+        "id": "09",
+        "navTitle": "Professionnels spécialisés",
+        "panelTitle": "Professionnels Spécialisés pour Projets Industriels",
+        "badge": "09 / PROFESSIONNELS SPÉCIALISÉS",
+        "img": "assets/images/services/09_profesionales_especializados.jpg",
+        "alt": "Équipe technique de professionnels industriels Hexagon",
+        "desc": "Équipes techniques et profils qualifiés pour arrêts d'usine, pointes de charge et renfort de projets industriels. Sélection rigoureuse et coordination directe pour répondre aux exigences de vos sites.",
+        "tags": [
+          "Soudeurs homologués",
+          "Tuyauteurs monteurs",
+          "Mécaniciens & chaudronniers"
+        ],
+        "profiles": [
+          {
+            "title": "Soudeurs homologués",
+            "desc": "Procédés TIG, MIG/MAG et électrode qualifiés ASME IX et EN ISO 9606-1."
+          },
+          {
+            "title": "Chaudronniers industriels",
+            "desc": "Traçage, découpe plasma, roulage et assemblage d'appareils et gaines."
+          },
+          {
+            "title": "Tuyauteurs industriels",
+            "desc": "Lecture d'isométriques, prise de cotes, chanfreinage et pointage de tuyauteries."
+          },
+          {
+            "title": "Monteurs en charpente",
+            "desc": "Montage mécanique en hauteur, aplomb de portiques et serrage contrôlé."
+          },
+          {
+            "title": "Mécaniciens industriels",
+            "desc": "Maintenance préventive, réglage de jeux, roulements et lignage d'équipements."
+          }
+        ],
+        "reqs": [
+          "Profils techniques et qualifications recherchées.",
+          "Effectif prévisionnel d'intervenants nécessaires.",
+          "Localisation géographique du site ou de l'usine.",
+          "Habilitations requises (ex. 6G ASME, ISO 9606, formations sécurité/EHS)."
+        ],
+        "quoteTarget": "Profesionales Especializados"
+      }
+    ]
+  },
+  "de": {
+    "langCode": "de",
+    "eyebrow": "TECHNISCHE KAPAZITÄT VOR ORT",
+    "headline": "Technische Dienstleistungen in Kundenanlagen",
+    "lead": "Detaillierte Übersicht unserer Vor-Ort-Leistungen und technische Spezifikationen, die für ein verbindliches Festpreisangebot erforderlich sind.",
+    "scopeTag": "SPANIEN &nbsp;·&nbsp; EUROPÄISCHE UNION",
+    "reqSummary": "Erforderliche Angaben für Angebot",
+    "reqToggle": "Technische Anforderungen ansehen &nbsp;→",
+    "quoteBtnDefault": "Angebot anfordern &nbsp;↗",
+    "quoteBtnService09": "Fachpersonal für Projekt anfordern &nbsp;↗",
+    "bannerEyebrow": "VERSTÄRKUNG FÜR IHR PROJEKT",
+    "bannerTitle": "Spezialisierte Fachkräfte",
+    "bannerDesc": "Technische Teams für Anlagenstillstände, Arbeitsspitzen und Industrieprojekte.",
+    "bannerBtn": "Profile und Anforderungen ansehen &nbsp;→",
+    "services": [
+      {
+        "id": "01",
+        "navTitle": "Industriemontage",
+        "panelTitle": "Industriemontage & Anlagenbau",
+        "badge": "01 / INDUSTRIEMONTAGE",
+        "img": "assets/images/services/01_montaje_industrial.jpg",
+        "alt": "Industriemontage von Fertigungslinien und Stahlbau",
+        "desc": "Montage, Positionierung und mechanische Befestigung von schweren und leichten Stahlkonstruktionen, kontinuierlichen Fertigungslinien, Maschinenbetten, Laufstegen und Struktursystemen.",
+        "tags": [
+          "Stahlbau & Tragwerke",
+          "Fertigungslinien",
+          "Vor-Ort-Montage"
+        ],
+        "reqs": [
+          "Übersichts- und Montagepläne sowie technische Beschreibung.",
+          "Geschätzte Abmessungen und Einzelgewichte der Baugruppen.",
+          "Im Werk verfügbare Hebezeuge und Krankapazitäten.",
+          "Ausführungsfristen und Zeitfenster für Anlagenstillstände."
+        ],
+        "quoteTarget": "Montaje Industrial"
+      },
+      {
+        "id": "02",
+        "navTitle": "Instandhaltung",
+        "panelTitle": "Instandhaltung & Anlagenstillstände",
+        "badge": "02 / INDUSTRIELLE INSTANDHALTUNG",
+        "img": "assets/images/services/02_mantenimiento_industrial.jpg",
+        "alt": "Vorbeugende und korrigierende Instandhaltung im Werk",
+        "desc": "Vorbeugende und korrigierende mechanische Instandhaltungsarbeiten vor Ort. Intensive Ausführung während geplanter Anlagenstillstände (Revampings) zur Minimierung von Ausfallzeiten.",
+        "tags": [
+          "Präventive Wartung",
+          "Anlagenstillstände",
+          "Rotierende Maschinen"
+        ],
+        "reqs": [
+          "Anlagentyp und mechanische Baugruppen für den Eingriff.",
+          "Instandhaltungshistorie und geplanter Revisionsumfang.",
+          "Terminfenster und Meilensteine des Stillstands.",
+          "Sicherheitsrichtlinien und Zutrittsgenehmigungen für beengte Räume."
+        ],
+        "quoteTarget": "Mantenimiento Industrial"
+      },
+      {
+        "id": "03",
+        "navTitle": "Schweißtechnik",
+        "panelTitle": "Zertifiziertes Schweißen & Fügetechnik",
+        "badge": "03 / ZERTIFIZIERTES SCHWEISSEN",
+        "img": "assets/images/services/03_soldadura_tecnica.jpg",
+        "alt": "Geprüftes Schweißen WIG MIG MAG E-Hand",
+        "desc": "Zertifizierte Schweißverfahren in Werkstatt und auf Baustelle: WIG (GTAW), MIG/MAG (GMAW/FCAW) und E-Hand (SMAW). Kohlenstoffstahl, Edelstahl, Sonderlegierungen und Druckbehälter mit ZfP-Prüfung.",
+        "tags": [
+          "WIG / MIG-MAG Schweißen",
+          "ASME / EN Zertifizierung",
+          "ZfP / NDT Prüfungen"
+        ],
+        "reqs": [
+          "Geforderte Schweißanweisungen (WPS) und Verfahrensprüfungen (WPQR).",
+          "Grundwerkstoffe, Wandstärken und Rohrdurchmesser.",
+          "Vorgeschriebene zerstörungsfreie Prüfungen (Farbeindring, RT, UT).",
+          "Einsatzbedingungen (Werkstatt, Montage vor Ort, Höhe, beengter Raum)."
+        ],
+        "quoteTarget": "Soldadura Homologada"
+      },
+      {
+        "id": "04",
+        "navTitle": "Rohrleitungsbau (Piping)",
+        "panelTitle": "Industrieller Rohrleitungsbau & Piping",
+        "badge": "04 / INDUSTRIELLER ROHRLEITUNGSBAU",
+        "img": "assets/images/services/04_montaje_tuberias_piping.jpg",
+        "alt": "Industrieller Rohrleitungsbau und Isometrien",
+        "desc": "Trassenführung, Aufmaß vor Ort, Spool-Passung, Schweißung und Montage von Rohrleitungsnetzen für Prozesschemie, Hochdruckdampf, Kondensat, Gase, Druckluft und Löschanlagen nach engen Isometrietoleranzen.",
+        "tags": [
+          "Spools & Vorfertigung",
+          "Dampf- & Chemie-Leitungen",
+          "Druckproben"
+        ],
+        "reqs": [
+          "Rohrleitungs-Isometrien und R&I-Fließbilder (P&ID).",
+          "Rohrwerkstoffe (C-Stahl, Edelstahl 1.4404, Duplex-Stähle).",
+          "Auslegungsdruck und Betriebstemperatur des Mediums.",
+          "Werkstattvorfertigung im Spoolbau vs. Baustellenmontage."
+        ],
+        "quoteTarget": "Tubería y Calderería"
+      },
+      {
+        "id": "05",
+        "navTitle": "Kessel- und Apparatebau",
+        "panelTitle": "Schwerer Kessel- & Apparatebau",
+        "badge": "05 / KESSEL- UND APPARATEBAU",
+        "img": "assets/images/services/05_caldereria_ensamblaje.jpg",
+        "alt": "Industrieller Kesselbau Silos Behälter Kanäle",
+        "desc": "Fertigung vor Ort, Modifikation und Montage von mittel- und schwerem Apparatebau: Rauchgaskanäle, Trichter, Silos, Zyklone, Lagerbehälter und gewalzte Schüsse aus Blechen verschiedener Stärken und Legierungen.",
+        "tags": [
+          "Schwerer Kesselbau",
+          "Silos, Trichter & Behälter",
+          "Blech- und Schalenbau"
+        ],
+        "reqs": [
+          "Konstruktionszeichnungen und Stücklisten für den Apparatebau.",
+          "Werkstoffspezifikationen (Blechgüten, Blechdicken, Beschichtungen).",
+          "Geometrie und Betriebsbedingungen von Behältern oder Kanälen.",
+          "Montagezugänge und Hilfsmittel am Aufstellungsort."
+        ],
+        "quoteTarget": "Tubería y Calderería"
+      },
+      {
+        "id": "06",
+        "navTitle": "Industriemechanik",
+        "panelTitle": "Industriemechanik & Laserausrichtung",
+        "badge": "06 / INDUSTRIEMECHANIK",
+        "img": "assets/images/services/06_mecanica_industrial.jpg",
+        "alt": "Industriemechanik und optische Laserausrichtung",
+        "desc": "Präzisionsausrichtung, Nivellierung und Laser-Wellenoptik an rotierenden Aggregaten: Kreiselpumpen, Industriegetrieben, Kompressoren, Dampfturbinen, Industrieventilatoren und Dauerantrieben.",
+        "tags": [
+          "Laserausrichtung",
+          "Rotierende Maschinen",
+          "Pumpen & Getriebe"
+        ],
+        "reqs": [
+          "Typ, Modell und Betriebsdaten des rotierenden Aggregats.",
+          "Zulässige Ausrichtetoleranzen und Schwingungsgrenzwerte.",
+          "Zustand der Fundamente; Austausch von Lagern und Dichtungen.",
+          "Kran- und Hebekapazitäten für Demontage und Rotortransport."
+        ],
+        "quoteTarget": "Mecánica Industrial"
+      },
+      {
+        "id": "07",
+        "navTitle": "Installation & Reparatur",
+        "panelTitle": "Anlagenüberholung & Instandsetzung",
+        "badge": "07 / INSTALLATION & INSTANDSETZUNG",
+        "img": "assets/images/services/07_instalacion_reparacion.jpg",
+        "alt": "Maschinenaufstellung Neuanlagen und Instandsetzung",
+        "desc": "Schlüsselfertige Montage neuer oder umgesetzter Maschinen, chemische/mechanische Fundamentverankerung, Anschluss von Versorgungsleitungen und schnelle Havarieführung durch Eingriffskolonnen.",
+        "tags": [
+          "Schlüsselfertige Montage",
+          "Fundamentverankerung",
+          "Schnelleinsatz"
+        ],
+        "reqs": [
+          "Herstellerspezifikationen und Aufstellungspläne der Maschine.",
+          "Verankerungs-, Verguss- und Nivellierungsvorgaben.",
+          "Benötigte Medienanschlüsse (Druckluft, Wasser, Schmierung, Strom).",
+          "Terminfenster für Trockenlauf, Justierung und Inbetriebnahme."
+        ],
+        "quoteTarget": "Mantenimiento de Líneas"
+      },
+      {
+        "id": "08",
+        "navTitle": "Hilfs- und Hebearbeiten",
+        "panelTitle": "Mechanische Hebe- & Hilfsarbeiten",
+        "badge": "08 / HEBE- UND HILFSARBEITEN",
+        "img": "assets/images/services/08_trabajos_auxiliares.jpg",
+        "alt": "Schwertransport Hilfsarbeiten Hebearbeiten Baustelle",
+        "desc": "Ganzheitliche Unterstützung für Generalunternehmer und EPC: Abladen und Zwischenlagerung schwerer Komponenten, zertifizierte Tandemzüge mit Hebegeschirren, Höhenarbeiten und Vorabvermessung.",
+        "tags": [
+          "Schwerlasthübe",
+          "Höhenarbeiten",
+          "EPC-Unterstützung"
+        ],
+        "reqs": [
+          "Genaue Aufgabenstellung und Umfang der Hilfsarbeiten.",
+          "Einzelgewichte, Abmessungen und Schwerpunktlage der Lasten.",
+          "Bodenbelastbarkeit und Stellflächen für Mobilkrane.",
+          "Einsatzkalender zur Abstimmung mit dem Hauptauftragnehmer."
+        ],
+        "quoteTarget": "Paradas de Planta"
+      },
+      {
+        "id": "09",
+        "navTitle": "Spezialisierte Fachkräfte",
+        "panelTitle": "Spezialisierte Fachkräfte für Industrieprojekte",
+        "badge": "09 / SPEZIALISIERTE FACHKRÄFTE",
+        "img": "assets/images/services/09_profesionales_especializados.jpg",
+        "alt": "Technisches Fachteam von Hexagon Industriemontagen",
+        "desc": "Spezialisierte Fachkolonnen für Anlagenstillstände, Arbeitsspitzen und industrielle Montageprojekte. Technische Vorauswahl und direkte Vor-Ort-Koordination zur Deckung Ihrer betrieblichen Bedarfe.",
+        "tags": [
+          "Geprüfte Schweißer",
+          "Rohrschlosser / Vorrichter",
+          "Industriemechaniker"
+        ],
+        "profiles": [
+          {
+            "title": "Geprüfte Schweißer",
+            "desc": "WIG, MIG/MAG und E-Hand nach ASME IX und DIN EN ISO 9606-1."
+          },
+          {
+            "title": "Industriekesselbauer",
+            "desc": "Anreißen, Plasmaschneiden, Richten und Heften von Behältern und Kanälen."
+          },
+          {
+            "title": "Rohrvorrichter nach Isometrie",
+            "desc": "Isometrieberechnung, Winkeleinpassung, Anfasen und Heften von Spools."
+          },
+          {
+            "title": "Stahlbaumonteure",
+            "desc": "Mechanische Montage in der Höhe, Portalachsen-Ausrichtung und Drehmomentverschraubung."
+          },
+          {
+            "title": "Industriemechaniker",
+            "desc": "Präventive Überholung, Lagertausch, Toleranzpassung und Aggregatausrichtung."
+          }
+        ],
+        "reqs": [
+          "Geforderte Berufsbilder und technische Qualifikationen.",
+          "Voraussichtliche Personenanzahl und Teamgröße.",
+          "Standort des Werks bzw. der Industrieanlage.",
+          "Erforderliche Nachweise (z.B. 6G ASME, ISO 9606, SCC/Sicherheitszertifikate)."
+        ],
+        "quoteTarget": "Profesionales Especializados"
+      }
+    ]
+  }
+}

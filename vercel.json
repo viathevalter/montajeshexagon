@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "redirects": [
+    { "source": "/es", "destination": "/es/", "permanent": true },
+    { "source": "/en", "destination": "/en/", "permanent": true },
+    { "source": "/fr", "destination": "/fr/", "permanent": true },
+    { "source": "/it", "destination": "/it/", "permanent": true },
+    { "source": "/de", "destination": "/de/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/es/assets/:match*", "destination": "/assets/:match*" },
+    { "source": "/en/assets/:match*", "destination": "/assets/:match*" },
+    { "source": "/fr/assets/:match*", "destination": "/assets/:match*" },
+    { "source": "/it/assets/:match*", "destination": "/assets/:match*" },
+    { "source": "/de/assets/:match*", "destination": "/assets/:match*" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

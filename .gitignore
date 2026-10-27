@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Local Environment & Secrets
+.env
+.env*.local
+
+# Vercel
+.vercel/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Test artifacts, scratch files & Chrome test profiles
+scratch/
+.chrome*
+*.log
+npm-debug.log*
+
+# Duplicate large raw media
+/Video Hero.mp4
+/assets/videos/Video Hero.mp4
+
+# Ephemeral user uploads & json database store
+data/uploads/
+data/quotes.json
+data/candidates.json
