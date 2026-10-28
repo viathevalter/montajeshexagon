@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { notifyQuote } = require('../lib/mailer');
 
 // Determine data directory (use /tmp on Vercel serverless functions)
 const DATA_DIR = process.env.VERCEL
@@ -141,7 +142,7 @@ module.exports = async function handler(req, res) {
       }
     };
 
-    // Safely persist to JSON store
+    // Safely persist to JSON store (local or fallback)
     try {
       ensureDir(DATA_DIR);
       const storeFile = path.join(DATA_DIR, 'quotes.json');
@@ -157,6 +158,20 @@ module.exports = async function handler(req, res) {
       fs.writeFileSync(storeFile, JSON.stringify(records, null, 2), 'utf8');
     } catch (fsErr) {
       console.warn('Storage warning (serverless ephemeral):', fsErr.message);
+    }
+
+    // Dispatch email / webhook notification
+    try {
+      const quoteNotificationPayload = {
+        ...record,
+        data: {
+          ...record.data,
+          files: data.files // Preserve base64 files for email attachments
+        }
+      };
+      await notifyQuote(quoteNotificationPayload);
+    } catch (notifyErr) {
+      console.warn('[Notification Error - /api/quote]:', notifyErr.message);
     }
 
     return res.status(200).json({

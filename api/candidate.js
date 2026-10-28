@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { notifyCandidate } = require('../lib/mailer');
 
 const DATA_DIR = process.env.VERCEL
   ? path.join('/tmp', 'data')
@@ -84,6 +85,7 @@ module.exports = async function handler(req, res) {
       }
     };
 
+    // Safely persist to JSON store (local or fallback)
     try {
       ensureDir(DATA_DIR);
       const storeFile = path.join(DATA_DIR, 'candidates.json');
@@ -99,6 +101,13 @@ module.exports = async function handler(req, res) {
       fs.writeFileSync(storeFile, JSON.stringify(records, null, 2), 'utf8');
     } catch (fsErr) {
       console.warn('Storage warning (serverless ephemeral):', fsErr.message);
+    }
+
+    // Dispatch email / webhook notification
+    try {
+      await notifyCandidate(record);
+    } catch (notifyErr) {
+      console.warn('[Notification Error - /api/candidate]:', notifyErr.message);
     }
 
     return res.status(200).json({

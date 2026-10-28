@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const { notifyQuote, notifyCandidate } = require('./lib/mailer');
 
 const PORT = 3000;
 const PUBLIC_DIR = __dirname;
@@ -64,7 +65,7 @@ const server = http.createServer((req, res) => {
         req.destroy();
       }
     });
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
         const data = JSON.parse(body || '{}');
         // Rigorous validation
@@ -113,7 +114,7 @@ const server = http.createServer((req, res) => {
                 name: f.name || safeName,
                 size: f.size || 0,
                 type: f.type || 'application/octet-stream',
-                savedPath: diskPath ? path.relative(ROOT_DIR, diskPath) : null
+                savedPath: diskPath ? path.relative(PUBLIC_DIR, diskPath) : null
               });
             }
           }
@@ -161,6 +162,19 @@ const server = http.createServer((req, res) => {
         records.push(record);
         fs.writeFileSync(storeFile, JSON.stringify(records, null, 2), 'utf8');
 
+        // Dispatch email / webhook notification
+        try {
+          await notifyQuote({
+            ...record,
+            data: {
+              ...record.data,
+              files: data.files
+            }
+          });
+        } catch (notifyErr) {
+          console.warn('[Notification Error - /api/quote]:', notifyErr.message);
+        }
+
         sendJson(res, 200, {
           success: true,
           reference: quoteRef,
@@ -184,7 +198,7 @@ const server = http.createServer((req, res) => {
         req.destroy();
       }
     });
-    req.on('end', () => {
+    req.on('end', async () => {
       try {
         const data = JSON.parse(body || '{}');
         const missing = [];
@@ -229,6 +243,13 @@ const server = http.createServer((req, res) => {
         }
         records.push(record);
         fs.writeFileSync(storeFile, JSON.stringify(records, null, 2), 'utf8');
+
+        // Dispatch email / webhook notification
+        try {
+          await notifyCandidate(record);
+        } catch (notifyErr) {
+          console.warn('[Notification Error - /api/candidate]:', notifyErr.message);
+        }
 
         sendJson(res, 200, {
           success: true,
