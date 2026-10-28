@@ -27,15 +27,20 @@ El proyecto está 100% optimizado para despliegue directo en **Vercel**:
    - **Build Command:** *(dejar vacío / default)*
    - **Output Directory:** *(dejar vacío / default)*
 3. **Funciones Serverless y Notificaciones (`/api`):**
-   - `POST /api/quote` — Registro y tramitación de presupuestos con envío de email corporativo y adjuntos técnicos directos.
+   - `POST /api/quote` — Registro y tramitación de presupuestos con envío de email corporativo a `info@montajeshexagon.com` y adjuntos técnicos directos.
    - `POST /api/candidate` — Recepción de candidaturas para el departamento de RRHH.
-   - En Vercel, el sistema despacha los formularios vía **SMTP (Nodemailer)**, **Resend** o **Webhooks** para garantizar persistencia y entrega inmediata.
+   - `POST /api/contact` — Mensajes y consultas de contacto directo.
+   - En Vercel, el sistema despacha todos los formularios hacia el buzón oficial **`info@montajeshexagon.com`** vía **SMTP** (servidor de correo del dominio próprio `montajeshexagon.com`), **Resend** o **Webhooks**.
 4. **Variables de Entorno en Vercel (Project Settings → Environment Variables):**
-   - `NOTIFICATION_EMAIL`: Correo de destino del equipo Hexagon (ej. `contacto@hexagonmontajes.com`).
-   - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`: Credenciales SMTP para despacho de correos y adjuntos.
-   - *(Opcional)* `RESEND_API_KEY`: Clave API de Resend para envío directo vía REST.
-   - *(Opcional)* `WEBHOOK_URL`: Webhook para notificaciones en Slack, Discord o CRM.
-   *(Consulta `.env.example` para una plantilla lista para usar)*.
+   - `NOTIFICATION_EMAIL`: `info@montajeshexagon.com` (correo oficial de recepción).
+   - `SMTP_HOST`: Servidor SMTP de tu dominio (ej. `mail.montajeshexagon.com`).
+   - `SMTP_PORT`: Puerto SMTP (ej. `465` para SSL o `587` para TLS).
+   - `SMTP_SECURE`: `true` (para puerto 465) o `false`.
+   - `SMTP_USER`: `info@montajeshexagon.com`.
+   - `SMTP_PASS`: Contraseña del buzón de correo.
+   - `SMTP_FROM`: `"Hexagon Montajes" <info@montajeshexagon.com>`.
+   - *(Opcional)* `WEBHOOK_URL`: Webhook para notificaciones simultáneas en Slack, Discord o CRM.
+   *(Consulta `.env.example` para la plantilla completa)*.
 5. **Enrutamiento y Caché (`vercel.json`):**
    - Redirecciones limpias automáticas (`/es` → `/es/`).
    - Caché inmutable para activos estáticos (`/assets/`).

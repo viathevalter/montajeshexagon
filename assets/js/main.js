@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const CONFIG = {
     whatsappNumber: '', // Reservado para asignación por cliente
-    contactEmail: 'contacto@montajeshexagon.com',
+    contactEmail: 'info@montajeshexagon.com',
     companyLegalName: 'Hexagon Montajes Industriales, S.L.',
     sessionKeyIntro: 'hexagon_intro_viewed_v1'
   };
@@ -1600,7 +1600,7 @@ document.addEventListener('DOMContentLoaded', () => {
       candSubmitBtn: 'Enviar Candidatura Técnica',
       candSuccessTitle: '✓ Candidatura Registrada — Referencia',
       candSuccessBody: 'Tus datos han sido registrados en la base técnica de selección directa de Hexagon Montajes Industriales.',
-      candConnError: 'No se pudo conectar con el servidor de candidaturas. Puedes escribir directamente a contacto@montajeshexagon.com con tu CV adjunto.',
+      candConnError: 'No se pudo conectar con el servidor de candidaturas. Puedes escribir directamente a info@montajeshexagon.com con tu CV adjunto.',
       whatsappDefaultText: 'Hola. Quisiera consultar la disponibilidad y presupuesto de Hexagon Montajes Industriales para un proyecto técnico.'
     },
     en: {
@@ -1635,7 +1635,7 @@ document.addEventListener('DOMContentLoaded', () => {
       candSubmitBtn: 'Submit Technical Application',
       candSuccessTitle: '✓ Application Registered — Reference',
       candSuccessBody: 'Your details have been registered in the direct recruitment database of Hexagon Montajes Industriales.',
-      candConnError: 'Could not connect to the recruitment server. You may write directly to contacto@montajeshexagon.com with your CV attached.',
+      candConnError: 'Could not connect to the recruitment server. You may write directly to info@montajeshexagon.com with your CV attached.',
       whatsappDefaultText: 'Hello. I would like to inquire about availability and a quote from Hexagon Montajes Industriales for a technical project.'
     },
     it: {
@@ -1670,7 +1670,7 @@ document.addEventListener('DOMContentLoaded', () => {
       candSubmitBtn: 'Invia Candidatura Tecnica',
       candSuccessTitle: '✓ Candidatura Registrata — Riferimento',
       candSuccessBody: 'I tuoi dati sono stati registrati nel database di selezione diretta di Hexagon Montajes Industriales.',
-      candConnError: 'Impossibile connettersi al server delle candidature. Puoi scrivere direttamente a contacto@montajeshexagon.com allegando il tuo CV.',
+      candConnError: 'Impossibile connettersi al server delle candidature. Puoi scrivere direttamente a info@montajeshexagon.com allegando il tuo CV.',
       whatsappDefaultText: 'Salve. Vorrei verificare la disponibilità e richiedere un preventivo a Hexagon Montajes Industriales per un progetto tecnico.'
     },
     fr: {
@@ -1705,7 +1705,7 @@ document.addEventListener('DOMContentLoaded', () => {
       candSubmitBtn: 'Envoyer la Candidature Technique',
       candSuccessTitle: '✓ Candidature Enregistrée — Référence',
       candSuccessBody: 'Vos données ont été enregistrées dans la base de recrutement direct de Hexagon Montajes Industriales.',
-      candConnError: 'Impossible de se connecter au serveur de candidatures. Vous pouvez écrire directement à contacto@montajeshexagon.com avec votre CV joint.',
+      candConnError: 'Impossible de se connecter au serveur de candidatures. Vous pouvez écrire directement à info@montajeshexagon.com avec votre CV joint.',
       whatsappDefaultText: 'Bonjour. Je souhaiterais consulter la disponibilité et obtenir un devis de Hexagon Montajes Industriales pour un projet technique.'
     },
     de: {
@@ -1740,7 +1740,7 @@ document.addEventListener('DOMContentLoaded', () => {
       candSubmitBtn: 'Technische Bewerbung senden',
       candSuccessTitle: '✓ Bewerbung registriert — Referenz',
       candSuccessBody: 'Ihre Daten wurden in der Datenbank für die Direktrekrutierung von Hexagon Montajes Industriales erfasst.',
-      candConnError: 'Es konnte keine Verbindung zum Bewerbungsserver hergestellt werden. Sie können direkt an contacto@montajeshexagon.com mit angehängtem Lebenslauf schreiben.',
+      candConnError: 'Es konnte keine Verbindung zum Bewerbungsserver hergestellt werden. Sie können direkt an info@montajeshexagon.com mit angehängtem Lebenslauf schreiben.',
       whatsappDefaultText: 'Guten Tag. Ich möchte die Verfügbarkeit prüfen und ein Angebot von Hexagon Montajes Industriales für ein technisches Projekt anfordern.'
     }
   };
@@ -2727,7 +2727,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul>
             <li><strong>Denominación social reservada:</strong> Hexagon Montajes Industriales, S.L.</li>
             <li><strong>Actividad corporativa:</strong> Ejecución de montajes, mantenimiento técnico, soldadura homologada, tubería industrial y calderería en planta.</li>
-            <li><strong>Contacto técnico y administrativo:</strong> contacto@montajeshexagon.com | +34 900 123 456.</li>
+            <li><strong>Contacto técnico y administrativo:</strong> info@montajeshexagon.com | +34 900 123 456.</li>
           </ul>
           <h4>2. Objeto de la Actividad y Naturaleza de los Servicios</h4>
           <p>Hexagon Montajes Industriales, S.L. tiene como objeto la ejecución de servicios industriales especializados mediante equipos propios en las instalaciones de sus clientes en España y la Unión Europea.</p>
@@ -2738,14 +2738,14 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Política de Privacidad y Protección de Datos',
         content: `
           <h4>1. Responsable del Tratamiento</h4>
-          <p>El responsable del tratamiento de los datos es <strong>Hexagon Montajes Industriales, S.L.</strong>, correo electrónico: <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>El responsable del tratamiento de los datos es <strong>Hexagon Montajes Industriales, S.L.</strong>, correo electrónico: <strong>info@montajeshexagon.com</strong>.</p>
           <h4>2. Finalidades Diferenciadas del Tratamiento</h4>
           <ul>
             <li><strong>Formulario de Clientes / Presupuestos:</strong> Valoración técnica de peticiones de oferta, análisis de planos y emisión de propuestas económicas bajo medidas precontractuales (Art. 6.1.b RGPD).</li>
             <li><strong>Formulario de Trabajadores / Candidaturas:</strong> Gestión interna de procesos de selección y contratación directa para incorporación a la plantilla técnica de la empresa (Art. 6.1.a RGPD). No se ceden datos a empresas de trabajo temporal ni agencias externas.</li>
           </ul>
           <h4>3. Derechos del Interesado</h4>
-          <p>Puede ejercitar sus derechos de acceso, rectificación, supresión y limitación escribiendo a <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>Puede ejercitar sus derechos de acceso, rectificación, supresión y limitación escribiendo a <strong>info@montajeshexagon.com</strong>.</p>
         `
       },
       whatsappNotice: {
@@ -2754,7 +2754,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>Asistencia Técnica y Comercial</h4>
           <p>Para solicitar presupuestos urgentes, paradas técnicas o enviar su candidatura profesional, utilice los formularios directos de la página o escriba a:</p>
           <p style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--color-petrol); background: var(--color-warm-bg); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--color-copper);">
-            contacto@montajeshexagon.com
+            info@montajeshexagon.com
           </p>
         `
       }
@@ -2768,7 +2768,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul>
             <li><strong>Corporate Name:</strong> Hexagon Montajes Industriales, S.L.</li>
             <li><strong>Corporate Activity:</strong> Industrial assembly, plant maintenance, certified welding, industrial piping, and boilermaking.</li>
-            <li><strong>Technical & Administrative Contact:</strong> contacto@montajeshexagon.com | +34 900 123 456.</li>
+            <li><strong>Technical & Administrative Contact:</strong> info@montajeshexagon.com | +34 900 123 456.</li>
           </ul>
           <h4>2. Scope of Activity & Nature of Services</h4>
           <p>Hexagon Montajes Industriales, S.L. executes specialized industrial services using its own in-house teams at client facilities across Spain and the European Union.</p>
@@ -2779,14 +2779,14 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Privacy & Data Protection Policy',
         content: `
           <h4>1. Data Controller</h4>
-          <p>The data controller is <strong>Hexagon Montajes Industriales, S.L.</strong>, contact email: <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>The data controller is <strong>Hexagon Montajes Industriales, S.L.</strong>, contact email: <strong>info@montajeshexagon.com</strong>.</p>
           <h4>2. Purposes of Data Processing</h4>
           <ul>
             <li><strong>Client / Quote Request Form:</strong> Technical evaluation of tender requests, drawing analysis, and issuance of commercial proposals under pre-contractual measures (Art. 6.1.b GDPR).</li>
             <li><strong>Professional / Application Form:</strong> Internal management of direct recruitment processes for integration into the company’s technical workforce (Art. 6.1.a GDPR). Data is never shared with temporary staffing agencies.</li>
           </ul>
           <h4>3. Data Subject Rights</h4>
-          <p>You may exercise your rights of access, rectification, erasure, and restriction by writing to <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>You may exercise your rights of access, rectification, erasure, and restriction by writing to <strong>info@montajeshexagon.com</strong>.</p>
         `
       },
       whatsappNotice: {
@@ -2795,7 +2795,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>Technical & Commercial Assistance</h4>
           <p>To request urgent quotes, planned shutdown support, or submit your professional application, please use the direct forms on this page or write to:</p>
           <p style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--color-petrol); background: var(--color-warm-bg); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--color-copper);">
-            contacto@montajeshexagon.com
+            info@montajeshexagon.com
           </p>
         `
       }
@@ -2809,7 +2809,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul>
             <li><strong>Ragione Sociale:</strong> Hexagon Montajes Industriales, S.L.</li>
             <li><strong>Attività Societaria:</strong> Montaggi industriali, manutenzione tecnica d’impianto, saldatura certificata, piping industriale e carpenteria.</li>
-            <li><strong>Contatto Tecnico e Amministrativo:</strong> contacto@montajeshexagon.com | +34 900 123 456.</li>
+            <li><strong>Contatto Tecnico e Amministrativo:</strong> info@montajeshexagon.com | +34 900 123 456.</li>
           </ul>
           <h4>2. Oggetto dell’Attività e Natura dei Servizi</h4>
           <p>Hexagon Montajes Industriales, S.L. esegue servizi industriali specializzati mediante squadre proprie presso gli stabilimenti dei propri clienti in Spagna e nell’Unione Europea.</p>
@@ -2820,14 +2820,14 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Informativa sulla Privacy e Protezione dei Dati',
         content: `
           <h4>1. Titolare del Trattamento</h4>
-          <p>Il titolare del trattamento dei dati è <strong>Hexagon Montajes Industriales, S.L.</strong>, email: <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>Il titolare del trattamento dei dati è <strong>Hexagon Montajes Industriales, S.L.</strong>, email: <strong>info@montajeshexagon.com</strong>.</p>
           <h4>2. Finalità del Trattamento</h4>
           <ul>
             <li><strong>Modulo Clienti / Preventivi:</strong> Valutazione tecnica delle richieste d’offerta, analisi dei disegni ed emissione di proposte commerciali nell’ambito di misure precontrattuali (Art. 6.1.b GDPR).</li>
             <li><strong>Modulo Professionisti / Candidature:</strong> Gestione interna dei processi di selezione e assunzione diretta nell’organico tecnico aziendale (Art. 6.1.a GDPR). I dati non vengono ceduti ad agenzie interinali.</li>
           </ul>
           <h4>3. Diritti dell’Interessato</h4>
-          <p>È possibile esercitare i diritti di accesso, rettifica, cancellazione e limitazione scrivendo a <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>È possibile esercitare i diritti di accesso, rettifica, cancellazione e limitazione scrivendo a <strong>info@montajeshexagon.com</strong>.</p>
         `
       },
       whatsappNotice: {
@@ -2836,7 +2836,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>Assistenza Tecnica e Commerciale</h4>
           <p>Per richiedere preventivi urgenti, fermate tecniche o inviare la propria candidatura professionale, utilizzare i moduli diretti presenti nella pagina o scrivere a:</p>
           <p style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--color-petrol); background: var(--color-warm-bg); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--color-copper);">
-            contacto@montajeshexagon.com
+            info@montajeshexagon.com
           </p>
         `
       }
@@ -2850,7 +2850,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul>
             <li><strong>Raison Sociale :</strong> Hexagon Montajes Industriales, S.L.</li>
             <li><strong>Activité :</strong> Montage industriel, maintenance technique sur site, soudure homologuée, tuyauterie industrielle et chaudronnerie.</li>
-            <li><strong>Contact Technique et Administratif :</strong> contacto@montajeshexagon.com | +34 900 123 456.</li>
+            <li><strong>Contact Technique et Administratif :</strong> info@montajeshexagon.com | +34 900 123 456.</li>
           </ul>
           <h4>2. Objet de l’Activité et Nature des Services</h4>
           <p>Hexagon Montajes Industriales, S.L. a pour objet l’exécution de services industriels spécialisés par ses propres équipes sur les sites de ses clients en Espagne et dans l’Union européenne.</p>
@@ -2861,14 +2861,14 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Politique de Confidentialité et Protection des Données',
         content: `
           <h4>1. Responsable du Traitement</h4>
-          <p>Le responsable du traitement des données est <strong>Hexagon Montajes Industriales, S.L.</strong>, courriel : <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>Le responsable du traitement des données est <strong>Hexagon Montajes Industriales, S.L.</strong>, courriel : <strong>info@montajeshexagon.com</strong>.</p>
           <h4>2. Finalités du Traitement</h4>
           <ul>
             <li><strong>Formulaire Clients / Devis :</strong> Évaluation technique des demandes d’offres, analyse de plans et émission de propositions commerciales dans le cadre de mesures précontractuelles (Art. 6.1.b RGPD).</li>
             <li><strong>Formulaire Professionnels / Candidatures :</strong> Gestion interne des processus de sélection et de recrutement direct au sein de l’effectif technique de l’entreprise (Art. 6.1.a RGPD). Aucune donnée n’est cédée à des agences d’intérim.</li>
           </ul>
           <h4>3. Droits de la Personne Concernée</h4>
-          <p>Vous pouvez exercer vos droits d’accès, de rectification, de suppression et de limitation en écrivant à <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>Vous pouvez exercer vos droits d’accès, de rectification, de suppression et de limitation en écrivant à <strong>info@montajeshexagon.com</strong>.</p>
         `
       },
       whatsappNotice: {
@@ -2877,7 +2877,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>Assistance Technique et Commerciale</h4>
           <p>Pour demander un devis urgent, planifier un arrêt technique ou envoyer votre candidature professionnelle, veuillez utiliser les formulaires directs de la page ou écrire à :</p>
           <p style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--color-petrol); background: var(--color-warm-bg); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--color-copper);">
-            contacto@montajeshexagon.com
+            info@montajeshexagon.com
           </p>
         `
       }
@@ -2891,7 +2891,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <ul>
             <li><strong>Firmenname:</strong> Hexagon Montajes Industriales, S.L.</li>
             <li><strong>Unternehmensgegenstand:</strong> Industriemontage, technische Anlageninstandhaltung, zertifizierte Schweißtechnik, Industrielles Piping und Kesselbau.</li>
-            <li><strong>Technischer & Administrativer Kontakt:</strong> contacto@montajeshexagon.com | +34 900 123 456.</li>
+            <li><strong>Technischer & Administrativer Kontakt:</strong> info@montajeshexagon.com | +34 900 123 456.</li>
           </ul>
           <h4>2. Tätigkeitsbereich & Art der Dienstleistungen</h4>
           <p>Die Hexagon Montajes Industriales, S.L. führt spezialisierte Industriedienstleistungen mit eigenen Fachteams in den Werken ihrer Kunden in Spanien und der Europäischen Union aus.</p>
@@ -2902,14 +2902,14 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Datenschutzerklärung',
         content: `
           <h4>1. Verantwortlicher für die Datenverarbeitung</h4>
-          <p>Verantwortlicher für die Datenverarbeitung ist die <strong>Hexagon Montajes Industriales, S.L.</strong>, E-Mail: <strong>contacto@montajeshexagon.com</strong>.</p>
+          <p>Verantwortlicher für die Datenverarbeitung ist die <strong>Hexagon Montajes Industriales, S.L.</strong>, E-Mail: <strong>info@montajeshexagon.com</strong>.</p>
           <h4>2. Zwecke der Datenverarbeitung</h4>
           <ul>
             <li><strong>Kunden- / Angebotsformular:</strong> Technische Bewertung von Angebotsanfragen, Zeichnungsanalyse und Erstellung wirtschaftlicher Angebote im Rahmen vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO).</li>
             <li><strong>Bewerberformular:</strong> Interne Verwaltung von Auswahl- und Direktrekrutierungsverfahren zur Aufnahme in das technische Stammpersonal des Unternehmens (Art. 6 Abs. 1 lit. a DSGVO). Es erfolgt keine Weitergabe an Zeitarbeitsfirmen.</li>
           </ul>
           <h4>3. Rechte der betroffenen Person</h4>
-          <p>Sie können Ihre Rechte auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung jederzeit per E-Mail an <strong>contacto@montajeshexagon.com</strong> geltend machen.</p>
+          <p>Sie können Ihre Rechte auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung jederzeit per E-Mail an <strong>info@montajeshexagon.com</strong> geltend machen.</p>
         `
       },
       whatsappNotice: {
@@ -2918,7 +2918,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>Technische & Kaufmännische Unterstützung</h4>
           <p>Um dringende Angebote oder Anlagenstillstände anzufragen oder Ihre Bewerbung einzureichen, nutzen Sie bitte die direkten Formulare auf dieser Seite oder schreiben Sie an:</p>
           <p style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--color-petrol); background: var(--color-warm-bg); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--color-copper);">
-            contacto@montajeshexagon.com
+            info@montajeshexagon.com
           </p>
         `
       }

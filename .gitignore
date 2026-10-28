@@ -24,5 +24,4 @@ npm-debug.log*
 
 # Ephemeral user uploads & json database store
 data/uploads/
-data/quotes.json
-data/candidates.json
+data/*.json

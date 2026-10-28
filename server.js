@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { notifyQuote, notifyCandidate } = require('./lib/mailer');
+const { notifyQuote, notifyCandidate, notifyContact } = require('./lib/mailer');
 
 const PORT = 3000;
 const PUBLIC_DIR = __dirname;
@@ -255,6 +255,77 @@ const server = http.createServer((req, res) => {
           success: true,
           reference: candidateRef,
           message: 'Candidatura técnica recibida. Tus datos han sido incorporados al departamento de RRHH propio de Hexagon.',
+          timestamp: record.timestamp
+        });
+      } catch (err) {
+        sendJson(res, 400, { success: false, error: 'Formato JSON inválido.' });
+      }
+    });
+    return;
+  }
+
+  if (req.method === 'POST' && pathname === '/api/contact') {
+    let body = '';
+    req.on('data', chunk => {
+      body += chunk;
+      if (body.length > 5 * 1024 * 1024) {
+        res.writeHead(413, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: 'Payload too large' }));
+        req.destroy();
+      }
+    });
+    req.on('end', async () => {
+      try {
+        const data = JSON.parse(body || '{}');
+        const missing = [];
+        if (!data.name || !data.name.trim()) missing.push('name');
+        if (!data.email || !data.email.trim() || !data.email.includes('@')) missing.push('email');
+        if (!data.message || !data.message.trim()) missing.push('message');
+
+        if (missing.length > 0) {
+          sendJson(res, 400, {
+            success: false,
+            error: 'Campos requeridos incompletos.',
+            missingFields: missing
+          });
+          return;
+        }
+
+        const contactRef = `HEX-M-${Date.now().toString().slice(-6)}`;
+        const record = {
+          id: contactRef,
+          type: 'contact_message',
+          timestamp: new Date().toISOString(),
+          data: {
+            name: data.name.trim(),
+            email: data.email.trim(),
+            phone: (data.phone || '').trim(),
+            company: (data.company || '').trim(),
+            subject: (data.subject || 'Consulta web').trim(),
+            message: data.message.trim(),
+            privacyAccepted: true
+          }
+        };
+
+        const storeFile = path.join(DATA_DIR, 'contacts.json');
+        let records = [];
+        if (fs.existsSync(storeFile)) {
+          try { records = JSON.parse(fs.readFileSync(storeFile, 'utf8')); } catch (e) { records = []; }
+        }
+        records.push(record);
+        fs.writeFileSync(storeFile, JSON.stringify(records, null, 2), 'utf8');
+
+        // Dispatch email / webhook notification to info@montajeshexagon.com
+        try {
+          await notifyContact(record);
+        } catch (notifyErr) {
+          console.warn('[Notification Error - /api/contact]:', notifyErr.message);
+        }
+
+        sendJson(res, 200, {
+          success: true,
+          reference: contactRef,
+          message: 'Mensaje recibido correctamente. El equipo de Hexagon responderá a la brevedad.',
           timestamp: record.timestamp
         });
       } catch (err) {
