@@ -3,15 +3,21 @@ const fs = require('fs');
 const path = require('path');
 const { notifyQuote, notifyCandidate, notifyContact } = require('./lib/mailer');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = __dirname;
-const DATA_DIR = process.env.VERCEL ? path.join('/tmp', 'data') : path.join(PUBLIC_DIR, 'data');
+const DATA_DIR = process.env.VERCEL
+  ? path.join('/tmp', 'data')
+  : path.join(PUBLIC_DIR, 'data');
 
-try {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-} catch (e) {}
+function ensureDir(dir) {
+  try {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  } catch (e) {}
+}
+
+ensureDir(DATA_DIR);
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -41,7 +47,41 @@ function sendJson(res, statusCode, data) {
   res.end(JSON.stringify(data));
 }
 
-const server = http.createServer((req, res) => {
+function parseRequestBody(req, maxBytes) {
+  return new Promise((resolve, reject) => {
+    if (req.body !== undefined && req.body !== null) {
+      if (typeof req.body === 'object' && !Buffer.isBuffer(req.body)) {
+        return resolve(req.body);
+      }
+      if (typeof req.body === 'string') {
+        try { return resolve(JSON.parse(req.body || '{}')); } catch (e) { return reject(e); }
+      }
+      if (Buffer.isBuffer(req.body)) {
+        try { return resolve(JSON.parse(req.body.toString('utf8') || '{}')); } catch (e) { return reject(e); }
+      }
+    }
+    let body = '';
+    req.on('data', chunk => {
+      body += chunk;
+      if (body.length > maxBytes) {
+        const err = new Error('PAYLOAD_TOO_LARGE');
+        err.code = 413;
+        reject(err);
+        req.destroy();
+      }
+    });
+    req.on('end', () => {
+      try {
+        resolve(JSON.parse(body || '{}'));
+      } catch (e) {
+        reject(e);
+      }
+    });
+    req.on('error', reject);
+  });
+}
+
+const server = http.createServer(async (req, res) => {
   const urlObj = new URL(req.url, `http://localhost:${PORT}`);
   const pathname = decodeURIComponent(urlObj.pathname);
 
@@ -58,104 +98,93 @@ const server = http.createServer((req, res) => {
 
   // API Endpoints
   if (req.method === 'POST' && pathname === '/api/quote') {
-    let body = '';
-    req.on('data', chunk => {
-      body += chunk;
-      if (body.length > 25 * 1024 * 1024) { // 25MB limit
-        res.writeHead(413, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Payload too large' }));
-        req.destroy();
+    try {
+      const data = await parseRequestBody(req, 25 * 1024 * 1024);
+      const missing = [];
+      if (!data.company || !data.company.trim()) missing.push('company');
+      if (!data.name || !data.name.trim()) missing.push('name');
+      if (!data.email || !data.email.trim() || !data.email.includes('@')) missing.push('email');
+      if (!data.phone || !data.phone.trim()) missing.push('phone');
+      if (!data.location || !data.location.trim()) missing.push('location');
+      if (!data.service || !data.service.trim()) missing.push('service');
+      if (!data.scope || !data.scope.trim()) missing.push('scope');
+      if (!data.privacy) missing.push('privacy');
+
+      if (missing.length > 0) {
+        sendJson(res, 400, {
+          success: false,
+          error: 'Campos requeridos incompletos o inválidos.',
+          missingFields: missing
+        });
+        return;
       }
-    });
-    req.on('end', async () => {
-      try {
-        const data = JSON.parse(body || '{}');
-        // Rigorous validation
-        const missing = [];
-        if (!data.company || !data.company.trim()) missing.push('company');
-        if (!data.name || !data.name.trim()) missing.push('name');
-        if (!data.email || !data.email.trim() || !data.email.includes('@')) missing.push('email');
-        if (!data.phone || !data.phone.trim()) missing.push('phone');
-        if (!data.location || !data.location.trim()) missing.push('location');
-        if (!data.service || !data.service.trim()) missing.push('service');
-        if (!data.scope || !data.scope.trim()) missing.push('scope');
-        if (!data.privacy) missing.push('privacy');
 
-        if (missing.length > 0) {
-          sendJson(res, 400, {
-            success: false,
-            error: 'Campos requeridos incompletos o inválidos.',
-            missingFields: missing
-          });
-          return;
-        }
+      const quoteRef = `HEX-Q-${Date.now().toString().slice(-6)}`;
+      const UPLOADS_DIR = path.join(DATA_DIR, 'uploads');
+      ensureDir(UPLOADS_DIR);
 
-        const quoteRef = `HEX-Q-${Date.now().toString().slice(-6)}`;
-        
-        // Handle optional file attachments saving
-        const UPLOADS_DIR = path.join(DATA_DIR, 'uploads');
-        if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
-        
-        const savedFiles = [];
-        if (Array.isArray(data.files)) {
-          for (const f of data.files) {
-            if (typeof f === 'string') {
-              savedFiles.push({ name: f, size: 0, status: 'reference_only' });
-            } else if (f && typeof f === 'object') {
-              const safeName = (f.name || 'attachment').replace(/[^a-zA-Z0-9._-]/g, '_');
-              let diskPath = null;
-              if (f.base64) {
-                try {
-                  diskPath = path.join(UPLOADS_DIR, `${quoteRef}_${safeName}`);
-                  fs.writeFileSync(diskPath, Buffer.from(f.base64, 'base64'));
-                } catch(e) {
-                  diskPath = null;
-                }
+      const savedFiles = [];
+      if (Array.isArray(data.files)) {
+        for (const f of data.files) {
+          if (typeof f === 'string') {
+            savedFiles.push({ name: f, size: 0, status: 'reference_only' });
+          } else if (f && typeof f === 'object') {
+            const safeName = (f.name || 'attachment').replace(/[^a-zA-Z0-9._-]/g, '_');
+            let diskPath = null;
+            if (f.base64) {
+              try {
+                diskPath = path.join(UPLOADS_DIR, `${quoteRef}_${safeName}`);
+                fs.writeFileSync(diskPath, Buffer.from(f.base64, 'base64'));
+              } catch (e) {
+                diskPath = null;
               }
-              savedFiles.push({
-                name: f.name || safeName,
-                size: f.size || 0,
-                type: f.type || 'application/octet-stream',
-                savedPath: diskPath ? path.relative(PUBLIC_DIR, diskPath) : null
-              });
             }
+            savedFiles.push({
+              name: f.name || safeName,
+              size: f.size || 0,
+              type: f.type || 'application/octet-stream',
+              savedPath: diskPath ? path.basename(diskPath) : null
+            });
           }
         }
+      }
 
-        const record = {
-          id: quoteRef,
-          type: 'client_quote',
-          timestamp: new Date().toISOString(),
-          data: {
-            company: data.company.trim(),
-            name: data.name.trim(),
-            email: data.email.trim(),
-            phone: data.phone.trim(),
-            location: data.location.trim(),
-            service: data.service.trim(),
-            serviceDetails: data.serviceDetails || null,
-            profiles: Array.isArray(data.profiles) ? data.profiles : [],
-            profileDetails: Array.isArray(data.profileDetails) ? data.profileDetails : [],
-            needGuidance: Boolean(data.needGuidance),
-            projectTiming: data.projectTiming || {
-              startDate: data.startDate || '',
-              startDateTBD: Boolean(data.startDateTBD),
-              duration: data.duration || '',
-              durationTBD: Boolean(data.durationTBD),
-              shifts: data.shifts || '',
-              accessConditions: Array.isArray(data.accessConditions) ? data.accessConditions : []
-            },
-            staff: data.staff || '',
-            duration: data.duration || '',
+      const record = {
+        id: quoteRef,
+        type: 'client_quote',
+        timestamp: new Date().toISOString(),
+        data: {
+          company: data.company.trim(),
+          name: data.name.trim(),
+          email: data.email.trim(),
+          phone: data.phone.trim(),
+          location: data.location.trim(),
+          service: data.service.trim(),
+          serviceDetails: data.serviceDetails || null,
+          profiles: Array.isArray(data.profiles) ? data.profiles : [],
+          profileDetails: Array.isArray(data.profileDetails) ? data.profileDetails : [],
+          needGuidance: Boolean(data.needGuidance),
+          projectTiming: data.projectTiming || {
             startDate: data.startDate || '',
-            scope: data.scope.trim(),
-            files: savedFiles,
-            fileCount: savedFiles.length,
-            privacyAccepted: true,
-            lang: data.lang || 'es'
-          }
-        };
+            startDateTBD: Boolean(data.startDateTBD),
+            duration: data.duration || '',
+            durationTBD: Boolean(data.durationTBD),
+            shifts: data.shifts || '',
+            accessConditions: Array.isArray(data.accessConditions) ? data.accessConditions : []
+          },
+          staff: data.staff || '',
+          duration: data.duration || '',
+          startDate: data.startDate || '',
+          scope: data.scope.trim(),
+          files: savedFiles,
+          fileCount: savedFiles.length,
+          privacyAccepted: true,
+          lang: data.lang || 'es'
+        }
+      };
 
+      try {
+        ensureDir(DATA_DIR);
         const storeFile = path.join(DATA_DIR, 'quotes.json');
         let records = [];
         if (fs.existsSync(storeFile)) {
@@ -163,81 +192,76 @@ const server = http.createServer((req, res) => {
         }
         records.push(record);
         fs.writeFileSync(storeFile, JSON.stringify(records, null, 2), 'utf8');
+      } catch (e) {}
 
-        // Dispatch email / webhook notification
-        try {
-          await notifyQuote({
-            ...record,
-            data: {
-              ...record.data,
-              files: data.files
-            }
-          });
-        } catch (notifyErr) {
-          console.warn('[Notification Error - /api/quote]:', notifyErr.message);
-        }
-
-        sendJson(res, 200, {
-          success: true,
-          reference: quoteRef,
-          message: 'Solicitud de presupuesto registrada correctamente. El equipo técnico de Hexagon analizará su expediente.',
-          timestamp: record.timestamp
+      try {
+        await notifyQuote({
+          ...record,
+          data: {
+            ...record.data,
+            files: data.files
+          }
         });
-      } catch (err) {
+      } catch (notifyErr) {
+        console.warn('[Notification Error - /api/quote]:', notifyErr.message);
+      }
+
+      sendJson(res, 200, {
+        success: true,
+        reference: quoteRef,
+        message: 'Solicitud de presupuesto registrada correctamente. El equipo técnico de Hexagon analizará su expediente.',
+        timestamp: record.timestamp
+      });
+    } catch (err) {
+      if (err && err.code === 413) {
+        sendJson(res, 413, { error: 'Payload too large' });
+      } else {
         sendJson(res, 400, { success: false, error: 'Formato JSON inválido.' });
       }
-    });
+    }
     return;
   }
 
   if (req.method === 'POST' && pathname === '/api/candidate') {
-    let body = '';
-    req.on('data', chunk => {
-      body += chunk;
-      if (body.length > 25 * 1024 * 1024) {
-        res.writeHead(413, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Payload too large' }));
-        req.destroy();
+    try {
+      const data = await parseRequestBody(req, 25 * 1024 * 1024);
+      const missing = [];
+      if (!data.name || !data.name.trim()) missing.push('name');
+      if (!data.contact || !data.contact.trim()) missing.push('contact');
+      if (!data.specialty || !data.specialty.trim()) missing.push('specialty');
+      if (!data.residence || !data.residence.trim()) missing.push('residence');
+      if (!data.privacy) missing.push('privacy');
+
+      if (missing.length > 0) {
+        sendJson(res, 400, {
+          success: false,
+          error: 'Campos requeridos incompletos.',
+          missingFields: missing
+        });
+        return;
       }
-    });
-    req.on('end', async () => {
-      try {
-        const data = JSON.parse(body || '{}');
-        const missing = [];
-        if (!data.name || !data.name.trim()) missing.push('name');
-        if (!data.contact || !data.contact.trim()) missing.push('contact');
-        if (!data.specialty || !data.specialty.trim()) missing.push('specialty');
-        if (!data.residence || !data.residence.trim()) missing.push('residence');
-        if (!data.privacy) missing.push('privacy');
 
-        if (missing.length > 0) {
-          sendJson(res, 400, {
-            success: false,
-            error: 'Campos requeridos incompletos.',
-            missingFields: missing
-          });
-          return;
+      const candidateRef = `HEX-C-${Date.now().toString().slice(-6)}`;
+      const record = {
+        id: candidateRef,
+        type: 'worker_candidate',
+        timestamp: new Date().toISOString(),
+        data: {
+          name: data.name.trim(),
+          contact: data.contact.trim(),
+          specialty: data.specialty.trim(),
+          residence: data.residence.trim(),
+          mobility: data.mobility || 'No especificada',
+          experienceSummary: data.experienceSummary || '',
+          certifications: data.certifications || '',
+          languages: data.languages || '',
+          hasCv: !!data.hasCv,
+          privacyAccepted: true
         }
+      };
 
-        const candidateRef = `HEX-C-${Date.now().toString().slice(-6)}`;
-        const record = {
-          id: candidateRef,
-          type: 'worker_candidate',
-          timestamp: new Date().toISOString(),
-          data: {
-            name: data.name.trim(),
-            contact: data.contact.trim(),
-            specialty: data.specialty.trim(),
-            residence: data.residence.trim(),
-            mobility: data.mobility || 'No especificada',
-            experienceSummary: data.experienceSummary || '',
-            certifications: data.certifications || '',
-            languages: data.languages || '',
-            hasCv: !!data.hasCv,
-            privacyAccepted: true
-          }
-        };
-
+      try {
+        ensureDir(DATA_DIR);
         const storeFile = path.join(DATA_DIR, 'candidates.json');
         let records = [];
         if (fs.existsSync(storeFile)) {
@@ -245,70 +269,65 @@ const server = http.createServer((req, res) => {
         }
         records.push(record);
         fs.writeFileSync(storeFile, JSON.stringify(records, null, 2), 'utf8');
+      } catch (e) {}
 
-        // Dispatch email / webhook notification
-        try {
-          await notifyCandidate(record);
-        } catch (notifyErr) {
-          console.warn('[Notification Error - /api/candidate]:', notifyErr.message);
-        }
+      try {
+        await notifyCandidate(record);
+      } catch (notifyErr) {
+        console.warn('[Notification Error - /api/candidate]:', notifyErr.message);
+      }
 
-        sendJson(res, 200, {
-          success: true,
-          reference: candidateRef,
-          message: 'Candidatura técnica recibida. Tus datos han sido incorporados al departamento de RRHH propio de Hexagon.',
-          timestamp: record.timestamp
-        });
-      } catch (err) {
+      sendJson(res, 200, {
+        success: true,
+        reference: candidateRef,
+        message: 'Candidatura técnica recibida. Tus datos han sido incorporados al departamento de RRHH propio de Hexagon.',
+        timestamp: record.timestamp
+      });
+    } catch (err) {
+      if (err && err.code === 413) {
+        sendJson(res, 413, { error: 'Payload too large' });
+      } else {
         sendJson(res, 400, { success: false, error: 'Formato JSON inválido.' });
       }
-    });
+    }
     return;
   }
 
   if (req.method === 'POST' && pathname === '/api/contact') {
-    let body = '';
-    req.on('data', chunk => {
-      body += chunk;
-      if (body.length > 5 * 1024 * 1024) {
-        res.writeHead(413, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Payload too large' }));
-        req.destroy();
+    try {
+      const data = await parseRequestBody(req, 5 * 1024 * 1024);
+      const missing = [];
+      if (!data.name || !data.name.trim()) missing.push('name');
+      if (!data.email || !data.email.trim() || !data.email.includes('@')) missing.push('email');
+      if (!data.message || !data.message.trim()) missing.push('message');
+
+      if (missing.length > 0) {
+        sendJson(res, 400, {
+          success: false,
+          error: 'Campos requeridos incompletos.',
+          missingFields: missing
+        });
+        return;
       }
-    });
-    req.on('end', async () => {
-      try {
-        const data = JSON.parse(body || '{}');
-        const missing = [];
-        if (!data.name || !data.name.trim()) missing.push('name');
-        if (!data.email || !data.email.trim() || !data.email.includes('@')) missing.push('email');
-        if (!data.message || !data.message.trim()) missing.push('message');
 
-        if (missing.length > 0) {
-          sendJson(res, 400, {
-            success: false,
-            error: 'Campos requeridos incompletos.',
-            missingFields: missing
-          });
-          return;
+      const contactRef = `HEX-M-${Date.now().toString().slice(-6)}`;
+      const record = {
+        id: contactRef,
+        type: 'contact_message',
+        timestamp: new Date().toISOString(),
+        data: {
+          name: data.name.trim(),
+          email: data.email.trim(),
+          phone: (data.phone || '').trim(),
+          company: (data.company || '').trim(),
+          subject: (data.subject || 'Consulta web').trim(),
+          message: data.message.trim(),
+          privacyAccepted: true
         }
+      };
 
-        const contactRef = `HEX-M-${Date.now().toString().slice(-6)}`;
-        const record = {
-          id: contactRef,
-          type: 'contact_message',
-          timestamp: new Date().toISOString(),
-          data: {
-            name: data.name.trim(),
-            email: data.email.trim(),
-            phone: (data.phone || '').trim(),
-            company: (data.company || '').trim(),
-            subject: (data.subject || 'Consulta web').trim(),
-            message: data.message.trim(),
-            privacyAccepted: true
-          }
-        };
-
+      try {
+        ensureDir(DATA_DIR);
         const storeFile = path.join(DATA_DIR, 'contacts.json');
         let records = [];
         if (fs.existsSync(storeFile)) {
@@ -316,24 +335,27 @@ const server = http.createServer((req, res) => {
         }
         records.push(record);
         fs.writeFileSync(storeFile, JSON.stringify(records, null, 2), 'utf8');
+      } catch (e) {}
 
-        // Dispatch email / webhook notification to info@montajeshexagon.com
-        try {
-          await notifyContact(record);
-        } catch (notifyErr) {
-          console.warn('[Notification Error - /api/contact]:', notifyErr.message);
-        }
+      try {
+        await notifyContact(record);
+      } catch (notifyErr) {
+        console.warn('[Notification Error - /api/contact]:', notifyErr.message);
+      }
 
-        sendJson(res, 200, {
-          success: true,
-          reference: contactRef,
-          message: 'Mensaje recibido correctamente. El equipo de Hexagon responderá a la brevedad.',
-          timestamp: record.timestamp
-        });
-      } catch (err) {
+      sendJson(res, 200, {
+        success: true,
+        reference: contactRef,
+        message: 'Mensaje recibido correctamente. El equipo de Hexagon responderá a la brevedad.',
+        timestamp: record.timestamp
+      });
+    } catch (err) {
+      if (err && err.code === 413) {
+        sendJson(res, 413, { error: 'Payload too large' });
+      } else {
         sendJson(res, 400, { success: false, error: 'Formato JSON inválido.' });
       }
-    });
+    }
     return;
   }
 
@@ -382,7 +404,7 @@ const server = http.createServer((req, res) => {
     if (range && (ext === '.mp4' || ext === '.webm' || ext === '.ogv')) {
       const parts = range.replace(/bytes=/, '').split('-');
       const start = parseInt(parts[0], 10);
-      const maxChunk = 5 * 1024 * 1024; // 5MB chunks for smooth responsive playback
+      const maxChunk = 5 * 1024 * 1024;
       const end = parts[1] ? parseInt(parts[1], 10) : Math.min(start + maxChunk - 1, total - 1);
       const chunkSize = (end - start) + 1;
 
@@ -415,3 +437,5 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`Hexagon web server activo en http://localhost:${PORT}`);
 });
+
+module.exports = server;

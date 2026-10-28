@@ -2,6 +2,7 @@
   "name": "montajeshexagon",
   "version": "1.0.0",
   "description": "Hexagon Montajes Industriales — Especialistas en paradas de planta, calderería y personal técnico",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
