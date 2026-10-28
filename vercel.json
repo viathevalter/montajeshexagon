@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": ".",
   "redirects": [
     { "source": "/es", "destination": "/es/", "permanent": true },
     { "source": "/en", "destination": "/en/", "permanent": true },

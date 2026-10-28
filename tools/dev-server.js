@@ -1,10 +1,10 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { notifyQuote, notifyCandidate, notifyContact } = require('./lib/mailer');
+const { notifyQuote, notifyCandidate, notifyContact } = require('../lib/mailer');
 
 const PORT = process.env.PORT || 3000;
-const PUBLIC_DIR = __dirname;
+const PUBLIC_DIR = path.join(__dirname, '..');
 const DATA_DIR = process.env.VERCEL
   ? path.join('/tmp', 'data')
   : path.join(PUBLIC_DIR, 'data');
