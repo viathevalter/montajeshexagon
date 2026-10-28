@@ -5,11 +5,13 @@ const { notifyQuote, notifyCandidate, notifyContact } = require('./lib/mailer');
 
 const PORT = 3000;
 const PUBLIC_DIR = __dirname;
-const DATA_DIR = path.join(PUBLIC_DIR, 'data');
+const DATA_DIR = process.env.VERCEL ? path.join('/tmp', 'data') : path.join(PUBLIC_DIR, 'data');
 
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-}
+try {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+} catch (e) {}
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
