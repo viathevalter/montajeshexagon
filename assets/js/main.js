@@ -687,9 +687,83 @@ document.addEventListener('DOMContentLoaded', () => {
      4b. SECCIÓN MANTENIMIENTO Y PARADAS DE PLANTA (SCROLL SEQUENCING)
      ========================================================================== */
   function initMantenimientoParadasScroll() {
-    // La retención sticky de Mantenimiento y Paradas se gestiona en CSS vía position: sticky
-    // con un percurso de retenção de 260px.
-    // La revelación de los textos se gestiona en initProgressiveScrollReveal().
+    const section = document.querySelector('.section-mantenimiento-paradas');
+    if (!section) return;
+
+    const wrapper = section.querySelector('.mantenimiento-scroll-wrapper');
+    const stickyFrame = section.querySelector('.mantenimiento-sticky-frame');
+    const visualStage = section.querySelector('.mantenimiento-visual-stage');
+    const panelContainer = section.querySelector('.mantenimiento-panel-container');
+    const whitePanel = section.querySelector('.mantenimiento-white-panel');
+
+    const mobileMq = window.matchMedia('(max-width: 900px)');
+    const reducedMotionMq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let panelObserver = null;
+
+    function clearInlineLayoutStyles() {
+      [wrapper, stickyFrame, visualStage, panelContainer].forEach(el => {
+        if (!el) return;
+        el.style.removeProperty('height');
+        el.style.removeProperty('min-height');
+        el.style.removeProperty('top');
+        el.style.removeProperty('bottom');
+        el.style.removeProperty('position');
+        el.style.removeProperty('transform');
+        el.style.removeProperty('margin-top');
+      });
+    }
+
+    function applyMode() {
+      if (panelObserver) {
+        panelObserver.disconnect();
+        panelObserver = null;
+      }
+
+      if (mobileMq.matches) {
+        // Mobile: flujo vertical compacto sin pin/sticky ni superposición forzada
+        clearInlineLayoutStyles();
+
+        if (reducedMotionMq.matches || !('IntersectionObserver' in window) || !whitePanel) {
+          section.classList.remove('js-mobile-reveal');
+          section.classList.add('is-panel-visible');
+          if (whitePanel) {
+            whitePanel.style.removeProperty('opacity');
+            whitePanel.style.removeProperty('transform');
+          }
+        } else {
+          section.classList.add('js-mobile-reveal');
+          panelObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                section.classList.add('is-panel-visible');
+                obs.unobserve(entry.target);
+              }
+            });
+          }, {
+            rootMargin: '0px 0px -8% 0px',
+            threshold: 0.1
+          });
+          panelObserver.observe(whitePanel);
+        }
+      } else {
+        // Desktop: composición y animación de superposición originales intactas
+        section.classList.remove('js-mobile-reveal');
+        section.classList.remove('is-panel-visible');
+        if (whitePanel) {
+          whitePanel.style.removeProperty('opacity');
+          whitePanel.style.removeProperty('transform');
+        }
+      }
+    }
+
+    applyMode();
+    if (typeof mobileMq.addEventListener === 'function') {
+      mobileMq.addEventListener('change', applyMode);
+      reducedMotionMq.addEventListener('change', applyMode);
+    } else if (typeof mobileMq.addListener === 'function') {
+      mobileMq.addListener(applyMode);
+      reducedMotionMq.addListener(applyMode);
+    }
   }
   initMantenimientoParadasScroll();
 
