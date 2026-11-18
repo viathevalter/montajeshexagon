@@ -3115,8 +3115,8 @@ document.addEventListener('click', (e) => {
   const rawHref = anchor.getAttribute('href');
   if (!rawHref || rawHref === '#') return;
 
-  // Check if legal modal or whatsapp link
-  if (anchor.hasAttribute('data-legal-modal') || anchor.getAttribute('data-action') === 'whatsapp') return;
+  // Check if legal modal, whatsapp, or cookie settings link
+  if (anchor.hasAttribute('data-legal-modal') || anchor.getAttribute('data-action') === 'whatsapp' || anchor.getAttribute('data-action') === 'open-cookie-settings') return;
 
   // Check if quote modal button
   if (anchor.getAttribute('data-action') === 'open-quote-modal') {
@@ -3408,4 +3408,203 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initInnerServicePage);
 } else {
   initInnerServicePage();
+}
+
+/* ==========================================================================
+   CONSENTIMIENTO DE COOKIES ANALÍTICAS Y GOOGLE ANALYTICS 4 (G-MLHQ8FXBXJ)
+   ========================================================================== */
+function initCookieConsentAndGA4() {
+  const GA4_ID = 'G-MLHQ8FXBXJ';
+  const CONSENT_KEY = 'hexagon_cookie_consent';
+  const lang = ((document.documentElement.getAttribute('lang') || 'es').split('-')[0] || 'es').toLowerCase();
+
+  const I18N_COOKIES = {
+    es: {
+      ariaLabel: 'Configuración de cookies analíticas',
+      title: 'Cookies analíticas',
+      text: 'Utilizamos cookies analíticas (Google Analytics 4) únicamente para medir el uso del sitio de forma agregada y anónima. No enviamos datos personales ni el contenido de los formularios.',
+      accept: 'Aceptar',
+      reject: 'Rechazar',
+      settingsLink: 'Configuración de cookies'
+    },
+    en: {
+      ariaLabel: 'Analytical cookie settings',
+      title: 'Analytical cookies',
+      text: 'We use analytical cookies (Google Analytics 4) solely to measure site usage in an aggregated and anonymous way. We do not send personal data or form contents.',
+      accept: 'Accept',
+      reject: 'Reject',
+      settingsLink: 'Cookie settings'
+    },
+    fr: {
+      ariaLabel: 'Paramètres des cookies analytiques',
+      title: 'Cookies analytiques',
+      text: 'Nous utilisons des cookies analytiques (Google Analytics 4) uniquement pour mesurer la fréquentation du site de manière agrégée et anonyme. Aucune donnée personnelle ni contenu de formulaire n’est transmis.',
+      accept: 'Accepter',
+      reject: 'Refuser',
+      settingsLink: 'Paramètres des cookies'
+    },
+    it: {
+      ariaLabel: 'Impostazioni dei cookie analitici',
+      title: 'Cookie analitici',
+      text: 'Utilizziamo cookie analitici (Google Analytics 4) esclusivamente per misurare l’utilizzo del sito in forma aggregata e anonima. Non inviamo dati personali né il contenuto dei moduli.',
+      accept: 'Accetta',
+      reject: 'Rifiuta',
+      settingsLink: 'Impostazioni cookie'
+    },
+    de: {
+      ariaLabel: 'Einstellungen für Analyse-Cookies',
+      title: 'Analyse-Cookies',
+      text: 'Wir verwenden Analyse-Cookies (Google Analytics 4) ausschließlich zur aggregierten und anonymen Messung der Website-Nutzung. Personenbezogene Daten oder Formularinhalte werden nicht übermittelt.',
+      accept: 'Akzeptieren',
+      reject: 'Ablehnen',
+      settingsLink: 'Cookie-Einstellungen'
+    }
+  };
+
+  const t = I18N_COOKIES[lang] || I18N_COOKIES.es;
+
+  function getSavedConsent() {
+    try {
+      return window.localStorage.getItem(CONSENT_KEY);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveConsent(val) {
+    try {
+      window.localStorage.setItem(CONSENT_KEY, val);
+    } catch (e) {}
+  }
+
+  function clearGA4Cookies() {
+    const cookieNames = ['_ga', '_ga_MLHQ8FXBXJ', '_gid', '_gat_gtag_' + GA4_ID.replace(/-/g, '_')];
+    const host = window.location.hostname;
+    const domains = [host, '.' + host, '.montajeshexagon.com', 'www.montajeshexagon.com'];
+    cookieNames.forEach(name => {
+      document.cookie = name + '=; Max-Age=0; path=/; SameSite=Lax';
+      domains.forEach(d => {
+        document.cookie = name + '=; Max-Age=0; path=/; domain=' + d + '; SameSite=Lax';
+      });
+    });
+  }
+
+  function enableGA4() {
+    window['ga-disable-' + GA4_ID] = false;
+
+    if (!window.__hexagonGA4Initialized) {
+      window.__hexagonGA4Initialized = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() {
+        window.dataLayer.push(arguments);
+      };
+
+      window.gtag('consent', 'default', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
+      window.gtag('js', new Date());
+      window.gtag('config', GA4_ID, {
+        send_page_view: true,
+        anonymize_ip: true,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        page_location: window.location.origin + window.location.pathname,
+        page_title: document.title
+      });
+
+      if (!document.querySelector('script[data-hexagon-ga4="1"]')) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+        script.setAttribute('data-hexagon-ga4', '1');
+        document.head.appendChild(script);
+      }
+    } else if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    }
+  }
+
+  function disableGA4() {
+    window['ga-disable-' + GA4_ID] = true;
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    }
+    clearGA4Cookies();
+  }
+
+  // Create banner if not present
+  let banner = document.getElementById('hexagonCookieBanner');
+  if (!banner) {
+    banner = document.createElement('aside');
+    banner.id = 'hexagonCookieBanner';
+    banner.className = 'cookie-consent-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', t.ariaLabel);
+    banner.innerHTML =
+      '<p class="cookie-consent-title">' + t.title + '</p>' +
+      '<p class="cookie-consent-text">' + t.text + '</p>' +
+      '<div class="cookie-consent-actions">' +
+        '<button type="button" id="hexagonCookieReject" class="cookie-consent-btn cookie-consent-btn-reject">' + t.reject + '</button>' +
+        '<button type="button" id="hexagonCookieAccept" class="cookie-consent-btn cookie-consent-btn-accept">' + t.accept + '</button>' +
+      '</div>';
+    document.body.appendChild(banner);
+  }
+
+  const acceptBtn = document.getElementById('hexagonCookieAccept');
+  const rejectBtn = document.getElementById('hexagonCookieReject');
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      saveConsent('accepted');
+      banner.classList.remove('is-visible');
+      enableGA4();
+    });
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', () => {
+      saveConsent('rejected');
+      banner.classList.remove('is-visible');
+      disableGA4();
+    });
+  }
+
+  // Bind review/reopen triggers
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-action="open-cookie-settings"]');
+    if (!trigger) return;
+    e.preventDefault();
+    banner.classList.add('is-visible');
+  });
+
+  // Initial state evaluation
+  const initialConsent = getSavedConsent();
+  if (initialConsent === 'accepted') {
+    enableGA4();
+  } else {
+    window['ga-disable-' + GA4_ID] = true;
+    if (initialConsent !== 'rejected') {
+      banner.classList.add('is-visible');
+    }
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCookieConsentAndGA4);
+} else {
+  initCookieConsentAndGA4();
 }
