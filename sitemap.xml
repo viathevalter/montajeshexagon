@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Páginas iniciales por idioma -->
+  <url>
+    <loc>https://www.montajeshexagon.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/" />
+  </url>
+  <url>
+    <loc>https://www.montajeshexagon.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/" />
+  </url>
+  <url>
+    <loc>https://www.montajeshexagon.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/" />
+  </url>
+  <url>
+    <loc>https://www.montajeshexagon.com/it/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/" />
+  </url>
+  <url>
+    <loc>https://www.montajeshexagon.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/" />
+  </url>
+
+  <!-- Servicio: Personal especializado por idioma -->
+  <url>
+    <loc>https://www.montajeshexagon.com/servicios/personal-especializado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+  </url>
+  <url>
+    <loc>https://www.montajeshexagon.com/en/servicios/personal-especializado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+  </url>
+  <url>
+    <loc>https://www.montajeshexagon.com/fr/servicios/personal-especializado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+  </url>
+  <url>
+    <loc>https://www.montajeshexagon.com/it/servicios/personal-especializado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+  </url>
+  <url>
+    <loc>https://www.montajeshexagon.com/de/servicios/personal-especializado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.montajeshexagon.com/en/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.montajeshexagon.com/fr/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.montajeshexagon.com/it/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.montajeshexagon.com/de/servicios/personal-especializado/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.montajeshexagon.com/servicios/personal-especializado/" />
+  </url>
+</urlset>

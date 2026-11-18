@@ -35,7 +35,9 @@ const MIME_TYPES = {
   '.webm': 'video/webm',
   '.woff2': 'font/woff2',
   '.woff': 'font/woff',
-  '.ttf': 'font/ttf'
+  '.ttf': 'font/ttf',
+  '.xml': 'application/xml; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8'
 };
 
 function sendJson(res, statusCode, data) {

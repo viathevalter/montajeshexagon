@@ -3115,8 +3115,8 @@ document.addEventListener('click', (e) => {
   const rawHref = anchor.getAttribute('href');
   if (!rawHref || rawHref === '#') return;
 
-  // Check if legal modal link
-  if (anchor.hasAttribute('data-legal-modal')) return;
+  // Check if legal modal or whatsapp link
+  if (anchor.hasAttribute('data-legal-modal') || anchor.getAttribute('data-action') === 'whatsapp') return;
 
   // Check if quote modal button
   if (anchor.getAttribute('data-action') === 'open-quote-modal') {
